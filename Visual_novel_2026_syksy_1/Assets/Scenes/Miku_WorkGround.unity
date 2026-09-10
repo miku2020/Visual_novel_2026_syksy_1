@@ -324,8 +324,9 @@ MonoBehaviour:
     name: miku
     sentences:
     - Sanon Moi
-    - ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.  '
+    - ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   '
     - ja nyt heihei
+  dialogueManager: {fileID: 1079070995}
 --- !u!4 &656466893
 Transform:
   m_ObjectHideFlags: 0
@@ -474,8 +475,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 using TMPro;
 
 public class Text_Switch : MonoBehaviour
@@ -9,13 +6,23 @@ public class Text_Switch : MonoBehaviour
 
     public TMP_Text Text;
     public Dialogue dialogue;
+    [SerializeField] private Dialogue_Manager dialogueManager;
 
+    private void Awake()
+    {
+        if (dialogueManager == null)
+        {
+            dialogueManager = FindAnyObjectByType<Dialogue_Manager>();
+        }
+    }
 
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
-
+        if (dialogueManager != null)
+        {
+            dialogueManager.StartDialogue(dialogue);
         }
+    }
 
 }

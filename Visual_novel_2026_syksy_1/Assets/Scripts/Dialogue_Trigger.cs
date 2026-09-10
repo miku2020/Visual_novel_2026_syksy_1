@@ -1,14 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Dialogue_Trigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    [SerializeField] private Dialogue_Manager dialogueManager;
+
+    private void Awake()
+    {
+        if (dialogueManager == null)
+        {
+            dialogueManager = FindAnyObjectByType<Dialogue_Manager>();
+        }
+    }
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
+        if (dialogueManager != null)
+        {
+            dialogueManager.StartDialogue(dialogue);
+        }
     }
 
 }
+
