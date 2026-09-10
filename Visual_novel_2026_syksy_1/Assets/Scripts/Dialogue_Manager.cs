@@ -94,11 +94,12 @@ public class Dialogue_Manager : MonoBehaviour
         }
 
         currentSentence = line.sentence;
+        currentNextEvent = line.nextEvent;
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
         }
-        typingCoroutine = StartCoroutine(TypeSentence(currentSentence, line.nextEvent));
+        typingCoroutine = StartCoroutine(TypeSentence(currentSentence));
 
     }
 
@@ -151,7 +152,7 @@ public class Dialogue_Manager : MonoBehaviour
         }
     }
 
-    private IEnumerator TypeSentence(string sentence, UnityEvent nextEvent)
+    private IEnumerator TypeSentence(string sentence)
     {
         if (dialogueText == null)
         {
@@ -178,7 +179,6 @@ public class Dialogue_Manager : MonoBehaviour
         isTyping = false;
         sentenceComplete = true;
         typingCoroutine = null;
-        currentNextEvent = nextEvent;
     }
 
     private void ShowCurrentSentenceImmediately()
