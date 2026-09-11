@@ -11,9 +11,9 @@ public class Dialogue_Manager : MonoBehaviour
     public TMP_Text dialogueText;
     public Text_Switch initial;
 
-    [Header("Tekstin kirjoitusnopeus")]
-    [Min(0f)] public float typespeed = .03f;
-    [Min(0f)] public float typespeedfast = .005f;
+    [Header("Kirjaimen fade-in")]
+    [Min(0f)] public float fadeDuration = .03f;
+    [Min(1f)] public float spaceFadeSpeed = 4f;
     [Min(0f)] public float spaceHoldThreshold = .15f;
     private bool sentenceComplete;
     private bool isTyping;
@@ -162,23 +162,75 @@ public class Dialogue_Manager : MonoBehaviour
 
         isTyping = true;
         sentenceComplete = false;
-        dialogueText.text = "";
+        dialogueText.text = sentence;
+        dialogueText.alpha = 1f;
+        dialogueText.ForceMeshUpdate();
 
-        foreach (char letter in sentence)
+        TMP_TextInfo textInfo = dialogueText.textInfo;
+        int characterCount = textInfo.characterCount;
+        float totalDuration = characterCount * fadeDuration;
+        float elapsed = 0f;
+
+        while (elapsed < totalDuration)
         {
-            dialogueText.text += letter;
-            float wait = Keyboard.current != null && Keyboard.current.spaceKey.isPressed
-                ? typespeedfast
-                : typespeed;
-            if (wait > 0f)
+            bool spaceHeld = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;
+            float speed = spaceHeld ? spaceFadeSpeed : 1f;
+            elapsed += Time.deltaTime * speed;
+
+            for (int characterIndex = 0; characterIndex < characterCount; characterIndex++)
             {
-                yield return new WaitForSeconds(wait);
+                TMP_CharacterInfo characterInfo = textInfo.characterInfo[characterIndex];
+                if (!characterInfo.isVisible)
+                {
+                    continue;
+                }
+
+                float characterProgress = fadeDuration <= 0f
+                    ? 1f
+                    : (elapsed - characterIndex * fadeDuration) / fadeDuration;
+                byte alpha = (byte)(Mathf.Clamp01(characterProgress) * 255f);
+                TMP_MeshInfo meshInfo = textInfo.meshInfo[characterInfo.materialReferenceIndex];
+                int vertexIndex = characterInfo.vertexIndex;
+
+                for (int vertexOffset = 0; vertexOffset < 4; vertexOffset++)
+                {
+                    meshInfo.colors32[vertexIndex + vertexOffset].a = alpha;
+                }
             }
+
+            dialogueText.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+            yield return null;
         }
 
+        SetAllCharactersAlpha(255);
+        dialogueText.alpha = 1f;
         isTyping = false;
         sentenceComplete = true;
         typingCoroutine = null;
+    }
+
+    private void SetAllCharactersAlpha(byte alpha)
+    {
+        dialogueText.ForceMeshUpdate();
+        TMP_TextInfo textInfo = dialogueText.textInfo;
+
+        for (int characterIndex = 0; characterIndex < textInfo.characterCount; characterIndex++)
+        {
+            TMP_CharacterInfo characterInfo = textInfo.characterInfo[characterIndex];
+            if (!characterInfo.isVisible)
+            {
+                continue;
+            }
+
+            TMP_MeshInfo meshInfo = textInfo.meshInfo[characterInfo.materialReferenceIndex];
+            int vertexIndex = characterInfo.vertexIndex;
+            for (int vertexOffset = 0; vertexOffset < 4; vertexOffset++)
+            {
+                meshInfo.colors32[vertexIndex + vertexOffset].a = alpha;
+            }
+        }
+
+        dialogueText.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
     }
 
     private void ShowCurrentSentenceImmediately()
@@ -195,6 +247,8 @@ public class Dialogue_Manager : MonoBehaviour
         }
 
         dialogueText.text = currentSentence;
+    SetAllCharactersAlpha(255);
+        dialogueText.alpha = 1f;
         isTyping = false;
         sentenceComplete = true;
     }
