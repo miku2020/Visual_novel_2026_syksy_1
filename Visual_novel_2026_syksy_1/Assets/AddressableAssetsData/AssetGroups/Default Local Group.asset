@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 745deb2aba973724cbc34c62ca1e5397
+    m_Address: Assets/Placeholder assets/TestRoom 1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bf5bdce90bf70d54c96084eefb8e27ea
     m_Address: Assets/Placeholder assets/BG3.jpg
     m_ReadOnly: 0

@@ -3,15 +3,20 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.InputSystem;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceProviders;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BGImageTest : MonoBehaviour
 {
     [SerializeField] private Image backgroundImage;
     [SerializeField] private AssetReferenceSprite[] backgrounds;
+    [SerializeField] private AssetReference sceneToLoad;
 
     private readonly List<AsyncOperationHandle<Sprite>> handles = new();
     private readonly List<Sprite> loadedBackgrounds = new();
+    private AsyncOperationHandle<SceneInstance> sceneHandle;
+    private bool isLoadingOrUnloadingScene;
 
     private async void Start()
     {
@@ -31,13 +36,47 @@ public class BGImageTest : MonoBehaviour
             return;
 
         if (Keyboard.current.digit1Key.wasPressedThisFrame)
-            ShowBackground(0);
+            //ShowBackground(0);
+            LoadTestRoom();
         else if (Keyboard.current.digit2Key.wasPressedThisFrame)
-            ShowBackground(1);
+            //ShowBackground(1);
+            ;
         else if (Keyboard.current.digit3Key.wasPressedThisFrame)
-            ShowBackground(2);
+            //ShowBackground(2);
+            ;
         else if (Keyboard.current.digit4Key.wasPressedThisFrame)
-            ShowBackground(3);
+            //ShowBackground(3);
+            ;
+        else if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            UnloadTestRoom();
+    }
+
+    private async void LoadTestRoom()
+    {
+        if (isLoadingOrUnloadingScene || sceneHandle.IsValid())
+            return;
+
+        if (sceneToLoad == null || !sceneToLoad.RuntimeKeyIsValid())
+            return;
+
+        isLoadingOrUnloadingScene = true;
+        sceneHandle = Addressables.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
+        await sceneHandle.Task;
+        isLoadingOrUnloadingScene = false;
+
+        if (sceneHandle.Status != AsyncOperationStatus.Succeeded)
+            sceneHandle = default;
+    }
+
+    private async void UnloadTestRoom()
+    {
+        if (isLoadingOrUnloadingScene || !sceneHandle.IsValid())
+            return;
+
+        isLoadingOrUnloadingScene = true;
+        await Addressables.UnloadSceneAsync(sceneHandle).Task;
+        sceneHandle = default;
+        isLoadingOrUnloadingScene = false;
     }
 
     private void ShowBackground(int index)
@@ -60,6 +99,9 @@ public class BGImageTest : MonoBehaviour
             if (handle.IsValid())
                 Addressables.Release(handle);
         }
+
+        if (sceneHandle.IsValid())
+            Addressables.UnloadSceneAsync(sceneHandle);
     }
 }
 
