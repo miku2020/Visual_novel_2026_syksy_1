@@ -290,75 +290,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &602254896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 602254898}
-  - component: {fileID: 602254897}
-  m_Layer: 0
-  m_Name: Text_Switch
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &602254897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602254896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff1a2a5f33f459b43a2121f619c39caa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Text_Switch
-  Text: {fileID: 0}
-  dialogue:
-    name: 
-    lines:
-    - sentence: ' '
-      beforeEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      nextEvent:
-        m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 993302794}
-            m_TargetAssemblyTypeName: Text_Switch, Assembly-CSharp
-            m_MethodName: TriggerDialogue
-            m_Mode: 1
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
-    sentences: []
-  dialogueManager: {fileID: 0}
---- !u!4 &602254898
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602254896}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 734.087, y: 343.87988, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &656466891
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1a2a5f33f459b43a2121f619c39caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Text_Switch
-  Text: {fileID: 1410989444}
   dialogue:
     name: miku
     lines:
@@ -461,7 +391,6 @@ MonoBehaviour:
     - Sanon Moi
     - ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   '
     - ja nyt heihei
-  dialogueManager: {fileID: 1079070995}
 --- !u!4 &656466893
 Transform:
   m_ObjectHideFlags: 0
@@ -489,6 +418,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c320fd952023af545b2b31ca48d9916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Helloworld
+--- !u!1 &966468903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966468905}
+  - component: {fileID: 966468904}
+  m_Layer: 0
+  m_Name: BGImageTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &966468904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966468903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e848beb84c6ea48ad602fe79be5cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BGImageTest
+  backgroundImage: {fileID: 0}
+  backgrounds: []
+  sceneToLoad:
+    m_AssetGUID: 745deb2aba973724cbc34c62ca1e5397
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+--- !u!4 &966468905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966468903}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 547.2434, y: 361.54666, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &993302794 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
@@ -543,8 +524,8 @@ MonoBehaviour:
   nameText: {fileID: 1482357567}
   dialogueText: {fileID: 1410989444}
   initial: {fileID: 656466892}
-  typespeed: 0.2
-  typespeedfast: 0.01
+  fadeDuration: 0.03
+  spaceFadeSpeed: 4
   spaceHoldThreshold: 0.15
 --- !u!4 &1079070996
 Transform:
@@ -1021,7 +1002,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &2126780818
 RectTransform:
@@ -1124,12 +1105,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[2].beforeEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[2].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1144,11 +1133,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 993302795}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 993302794}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[2].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 993302795}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
@@ -1164,12 +1161,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: NameChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: FadeInOut, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Helloworld, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Text_Switch, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[2].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1180,11 +1185,19 @@ PrefabInstance:
       value: helloworld
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: "Yll\xE4tys Nimen vaihto"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[2].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: helloworld
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
+      propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7343365971532406246, guid: 4bf8f0c11b119bc46b00d98dca64d967, type: 3}
@@ -1206,4 +1219,4 @@ SceneRoots:
   - {fileID: 1079070996}
   - {fileID: 656466893}
   - {fileID: 4419632544768782240}
-  - {fileID: 602254898}
+  - {fileID: 966468905}
