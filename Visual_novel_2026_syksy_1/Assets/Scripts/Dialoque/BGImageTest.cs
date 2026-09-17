@@ -12,6 +12,7 @@ public class BGImageTest : MonoBehaviour
     [SerializeField] private Image backgroundImage;
     [SerializeField] private AssetReferenceSprite[] backgrounds;
     [SerializeField] private AssetReference sceneToLoad;
+    [SerializeField] private AssetReference SaveScene;
 
     private readonly List<AsyncOperationHandle<Sprite>> handles = new();
     private readonly List<Sprite> loadedBackgrounds = new();

@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee3b082e6aad62f47ab5f3c04793e037
+    m_Address: Assets/Scenes/Player_select_test.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ffc6323336293e64abd7f87447cc8961
     m_Address: Assets/Placeholder assets/BG1.jpg
     m_ReadOnly: 0
