@@ -4,9 +4,14 @@ using TMPro;
 public class Text_Switch : MonoBehaviour
 {
 
-    public TMP_Text Text;
+    //public TMP_Text Text;
     public Dialogue dialogue;
-    [SerializeField] private Dialogue_Manager dialogueManager;
+    /*[SerializeField]*/ private Dialogue_Manager dialogueManager;
+
+    public void NameChange(string newName)
+    {
+        dialogueManager.nameText.text = newName;
+    }
 
     private void Awake()
     {

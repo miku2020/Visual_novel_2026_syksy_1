@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default Local Group
+  m_GUID: a7a0be87f312a274a9fadaad6b961f6d
+  m_SerializeEntries:
+  - m_GUID: 66401162cdc00fe4b9271c88dc6b61c4
+    m_Address: Assets/Placeholder assets/BG4.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 745deb2aba973724cbc34c62ca1e5397
+    m_Address: Assets/Placeholder assets/TestRoom 1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf5bdce90bf70d54c96084eefb8e27ea
+    m_Address: Assets/Placeholder assets/BG3.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0093f94ce1f735468e9ceab58415048
+    m_Address: Assets/Placeholder assets/BG2.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffc6323336293e64abd7f87447cc8961
+    m_Address: Assets/Placeholder assets/BG1.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 6249f3d4b0bbf0e4a97a5b8c5d918944, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 38cfe62aa31b3694c8dc607a76ff9924, type: 2}
+    - {fileID: 11400000, guid: 2851443267fd13847b6955f662f2f68a, type: 2}
