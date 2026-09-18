@@ -15,8 +15,48 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: a7a0be87f312a274a9fadaad6b961f6d
   m_SerializeEntries:
+  - m_GUID: 0a37c2b2f2b3c434a8dc114ba83bfc40
+    m_Address: Assets/Scenes/Rooms/Franky 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f3da55f47ac1614a8d6cde12c23b3f8
+    m_Address: Assets/Scenes/Rooms/Sam 1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12dd3d25879a0084fb88297440c4ebf3
+    m_Address: Assets/Scenes/Rooms/Napalm 1..unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1accd9a3a06e8414a86507173b52fa2d
+    m_Address: Assets/Scenes/Rooms/Napalm 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ec5a51898c9bc84b925b1a77703deac
+    m_Address: Assets/Scenes/Rooms/Napalm 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bbcb53515bc43949bc118ba4f337447
+    m_Address: Assets/Scenes/Rooms/Elio 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 545f9731f24d1e740905ea7431ce2b8e
+    m_Address: Assets/Scenes/Rooms/Franky 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66401162cdc00fe4b9271c88dc6b61c4
     m_Address: Assets/Placeholder assets/BG4.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71175144bfc63d64c9283d21c8f3a3d4
+    m_Address: Assets/Scenes/Rooms/Franky 1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -25,13 +65,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c87b2ebe03efe24fbf7680c7173fde8
+    m_Address: Assets/Scenes/Rooms/Woyd 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f842c22fe0af2d4d8a981373c1026f3
     m_Address: Assets/Placeholder assets/TestRoom 6.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8241158f5b185424081ffb098b1c617a
+    m_Address: Assets/Scenes/Rooms/Napalm 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8288725b32572fc45a3af90944a8391d
+    m_Address: Assets/Scenes/Rooms/Elio 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 86bee4e3970793a44bdf5ee63ab18a87
     m_Address: Assets/Placeholder assets/TestRoom 5.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d208a670e8f74a468c286a1d1364a57
+    m_Address: Assets/Scenes/Rooms/Woyd 1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -45,8 +105,38 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977a3274973dbc846b46ad34feee21f4
+    m_Address: Assets/Scenes/Rooms/Elio 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a042b4158b5f7034caf4f91f7fe671e1
+    m_Address: Assets/Scenes/Rooms/Sam 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afb04ac7baa5c424ab0f44cc7d161253
+    m_Address: Assets/Scenes/Rooms/Woyd 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b05f3b9802ddf504ab2988c6bf1d9d1b
+    m_Address: Assets/Scenes/Rooms/Elio 1..unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b10e37d8475229146a994918a5278000
     m_Address: Assets/Placeholder assets/TestRoom 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b719f970a877dab48afee08fb032d059
+    m_Address: Assets/Scenes/Rooms/Elio 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc35ed66a2efcba429caa958046f7be8
+    m_Address: Assets/Scenes/Rooms/Sam 3.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -60,6 +150,36 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf96fdd2c94b51c4d89b20a1c0e07259
+    m_Address: Assets/Scenes/Rooms/Franky 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4e72de198c55e041a1514f0f25e9666
+    m_Address: Assets/Scenes/Rooms/Napalm 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e103b5d40f3b2c642a7145d8c0bf99a2
+    m_Address: Assets/Scenes/Rooms/Sam 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1edff62cae4c7c4dad33756149254b2
+    m_Address: Assets/Scenes/Rooms/Woyd 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5e8814c694e69847b5a6b7676df4784
+    m_Address: Assets/Scenes/Rooms/Sam 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed0c9e09777ad6a459fffd5f28e767b5
+    m_Address: Assets/Scenes/Rooms/Woyd 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ee3b082e6aad62f47ab5f3c04793e037
     m_Address: Assets/Scenes/Player_select_test.unity
     m_ReadOnly: 0
@@ -67,6 +187,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f68c07bfe3d7e0340a3ba16a6f6fd745
     m_Address: Assets/Placeholder assets/TestRoom 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc2133c77fb701f4d9eb4ffa1fec7250
+    m_Address: Assets/Scenes/Rooms/Franky 2.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
