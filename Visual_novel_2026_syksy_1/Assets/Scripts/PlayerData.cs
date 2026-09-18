@@ -8,4 +8,5 @@ public class PlayerData
 {
     public string playerName;
     public int Score;
+    public TaskHolderSaveData taskData;
 }

@@ -18,6 +18,9 @@ public class Gamedata : MonoBehaviour
     [SerializeField]
     private Button_test UIscript;
 
+    [SerializeField]
+    private TaskHolder taskHolder;
+
     public string loadedname;
     public int loadedscore;
     public DateTime loadedtime;
@@ -110,6 +113,12 @@ public class Gamedata : MonoBehaviour
         JSON_FILE_NAME = fileName;
         string filepath = Path.Combine(JsonDirectory, fileName);
         Directory.CreateDirectory(JsonDirectory);
+
+        if (taskHolder != null)
+        {
+            playerdata.taskData = taskHolder.CreateSaveData();
+        }
+
         File.WriteAllText(filepath, JsonUtility.ToJson(playerdata));
 
         Debug.Log("save created: " + filepath);
@@ -135,6 +144,12 @@ public class Gamedata : MonoBehaviour
 
         string json = File.ReadAllText(filepath);
         playerdata = JsonUtility.FromJson<PlayerData>(json);
+
+        if (taskHolder != null)
+        {
+            taskHolder.LoadSaveData(playerdata.taskData);
+        }
+
         Debug.Log("my Json Data is " + playerdata);
     }
 
