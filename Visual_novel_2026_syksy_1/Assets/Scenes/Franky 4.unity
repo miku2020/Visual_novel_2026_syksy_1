@@ -177,59 +177,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.size
-      value: 25
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[0].sentence
-      value: "Here. A hyperbolic rhombic dado.. dodece\u2026 dodecahedron!"
+      value: Here.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[1].sentence
-      value: "Holy shit. It\u2019s what I\u2019ve been looking for! You found it!! I can\u2019t believe this! Thank you so much!"
+      value: Thanks. Follow me.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[2].sentence
-      value: So. We chill now?
+      value: Now we just start digging. This may take awhile.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[3].sentence
-      value: Yeah. We cool. I like how passionate you are about helping. I could use someone like you in my life.
+      value: 'I will do anything for my friends. Even bury a body.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[4].sentence
-      value: No problem!
+      value: That's good to know.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[5].sentence
-      value: "...Seriously. You\u2019re one sick, sick freak. I like that about you."
+      value: "(HOURS LATER)\n\nPhew\u2026 It\u2019s done. Now throw him in there. And let\u2019s bury him."
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[6].sentence
-      value: Hehe! Can we go play video games in your house now?
+      value: Right. Was did he do, exactly?
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[7].sentence
-      value: "Fine. It\u2019s a little messy so watch your step."
+      value: "He was just being annoying. He called me \u201Dedgy\u201D and a \u201Dtryhard\u201D so I had to kill him."
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[8].sentence
-      value: "Woah! It\u2019s\u2026 It looks nice."
+      value: Reasonable.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[9].sentence
-      value: "That\u2019s one way to put it. Let\u2019s go on the couch. Just sweep all the paper away."
+      value: RIGHT?!?! So yeah. Thanks for helping me out here today.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[10].sentence
-      value: Mind If I look around?
+      value: "No problem. It\u2019s what I do."
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[11].sentence
-      value: "Not at all. I\u2019ll go put my  hyperbolic rhombic dodecahedron over there."
+      value: We still up for that video game session?
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[12].sentence
-      value: '*whistling* Hmm? What''s over here in this closet. Is that... AAAAAAH!!!'
+      value: "Of course. Let\u2019s go, friend."
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[13].sentence
@@ -285,7 +287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[1].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[2].nextEvent.m_PersistentCalls.m_Calls.Array.size
@@ -297,7 +299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[4].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[5].nextEvent.m_PersistentCalls.m_Calls.Array.size
@@ -329,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[12].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[13].nextEvent.m_PersistentCalls.m_Calls.Array.size
@@ -945,11 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[2].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Franky
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[3].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Player
+      value: Franky
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[3].nextEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
