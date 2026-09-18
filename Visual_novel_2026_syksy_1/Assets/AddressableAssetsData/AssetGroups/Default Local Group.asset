@@ -25,6 +25,31 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f842c22fe0af2d4d8a981373c1026f3
+    m_Address: Assets/Placeholder assets/TestRoom 6.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86bee4e3970793a44bdf5ee63ab18a87
+    m_Address: Assets/Placeholder assets/TestRoom 5.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91a59360c6387ed459d0d2ccf7b2e55e
+    m_Address: Assets/Placeholder assets/TestRoom 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9442b988e506fd741bdb52cdea3f6c24
+    m_Address: Assets/Placeholder assets/TestRoom 7.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b10e37d8475229146a994918a5278000
+    m_Address: Assets/Placeholder assets/TestRoom 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bf5bdce90bf70d54c96084eefb8e27ea
     m_Address: Assets/Placeholder assets/BG3.jpg
     m_ReadOnly: 0
@@ -32,6 +57,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c0093f94ce1f735468e9ceab58415048
     m_Address: Assets/Placeholder assets/BG2.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee3b082e6aad62f47ab5f3c04793e037
+    m_Address: Assets/Scenes/Player_select_test.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f68c07bfe3d7e0340a3ba16a6f6fd745
+    m_Address: Assets/Placeholder assets/TestRoom 4.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
