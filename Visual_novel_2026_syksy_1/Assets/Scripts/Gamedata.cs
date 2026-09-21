@@ -114,9 +114,10 @@ public class Gamedata : MonoBehaviour
         string filepath = Path.Combine(JsonDirectory, fileName);
         Directory.CreateDirectory(JsonDirectory);
 
-        if (taskHolder != null)
+        TaskHolder currentTaskHolder = GetTaskHolder();
+        if (currentTaskHolder != null)
         {
-            playerdata.taskData = taskHolder.CreateSaveData();
+            playerdata.taskData = currentTaskHolder.CreateSaveData();
         }
 
         File.WriteAllText(filepath, JsonUtility.ToJson(playerdata));
@@ -136,18 +137,26 @@ public class Gamedata : MonoBehaviour
     public void LoadJsonData()
     {
         string filepath = Path.Combine(JsonDirectory ?? Application.persistentDataPath, JSON_FILE_NAME);
-        if (!File.Exists(filepath))
+        LoadSaveFile(filepath);
+    }
+
+    public void LoadSaveFile(string filepath)
+    {
+        if (string.IsNullOrWhiteSpace(filepath) || !File.Exists(filepath))
         {
             Debug.LogWarning("Save file not found: " + filepath);
             return;
         }
 
+        JsonDirectory = Path.GetDirectoryName(filepath);
+        JSON_FILE_NAME = Path.GetFileName(filepath);
         string json = File.ReadAllText(filepath);
         playerdata = JsonUtility.FromJson<PlayerData>(json);
 
-        if (taskHolder != null)
+        TaskHolder currentTaskHolder = GetTaskHolder();
+        if (currentTaskHolder != null)
         {
-            taskHolder.LoadSaveData(playerdata.taskData);
+            currentTaskHolder.LoadSaveData(playerdata.taskData);
         }
 
         Debug.Log("my Json Data is " + playerdata);
@@ -267,5 +276,10 @@ public class Gamedata : MonoBehaviour
         playerdata.playerName = playername;
         playerdata.Score = playerscore;
         Debug.Log("data set");
+    }
+
+    private TaskHolder GetTaskHolder()
+    {
+        return TaskHolder.Instance != null ? TaskHolder.Instance : taskHolder;
     }
 }

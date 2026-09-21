@@ -215,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462744175768578401}
-  - component: {fileID: 3917102397030624803}
+  - component: {fileID: 682315626448701140}
   m_Layer: 0
   m_Name: StartTrigger
   m_TagString: Untagged
@@ -238,7 +238,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2022690224046506451}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3917102397030624803
+--- !u!114 &682315626448701140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,9 +247,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6000464404664828225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64667266aa5bfbe4db81cad2db1cfd90, type: 3}
+  m_Script: {fileID: 11500000, guid: c2990f577ff73a34dbb795f028861669, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StartTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::RoomManager
   textSwitch: {fileID: 7968387475252959001}
 --- !u!1 &6863195323189711913
 GameObject:
