@@ -1,11 +1,14 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
 public class TaskHolderSaveData
 {
     public string activeCharacterName;
+    public string activeTaskCharacterName;
     public CharacterTaskSaveData[] characters;
+    public string[] collectedMcGuffins;
 }
 
 [Serializable]
@@ -13,61 +16,118 @@ public class CharacterTaskSaveData
 {
     public string characterName;
     public bool[] completedTasks;
+    public bool activeTaskAccepted;
 }
 
 /*
-=== README ===
+=== TASKHOLDER README ===
 
-TaskHolder sailottaa hahmojen tehtavien tilat ja avaa aktiivisen hahmon oman
-Misc-huoneen. Misc-huone voi kysya TaskHolderilta tehtavien tilan ja nayttaa
-sen Details-ikkunassa.
+TaskHolder on Bootstrap-scenessa oleva pysyva pelitilan manageri. Se sailyttaa
+aktiivisen hahmon, tehtavien etenemisen ja pelaajan keratyt mcguffinit.
 
-Inspector:
-- Characters: lisaa Franky, Mirai, Wyod ja muut hahmot.
-- Character Name: hahmon nimi.
-- Misc Room Index: taman hahmon oman Misc-huoneen indeksi.
-- Tasks: hahmon tehtavat jarjestyksessa 1-4.
+BootstrapSceneManager pysyy ladattuna, kun Misc-huone avataan additive-tilassa.
+Siksi Misc-huoneen dialogi voi kutsua TaskHolderia RoomManagerin kautta, vaikka
+TaskHolder ei ole Misc-huoneen scenessa.
+
+PELIKULKU
+
+1. Pelaaja valitsee hahmon kutsulla SelectCharacter("Franky").
+2. Kutsu OpenActiveCharacterMiscRoom().
+3. TaskHolder avaa hahmon ensimmaisen keskeneraisen tehtavan Room Index -huoneen.
+4. Hahmo antaa tehtavan. Dialogin viimeisessa UnityEventissa kutsu
+   RoomManager.OpenActiveTaskMiscRoom().
+5. TaskHolder avaa yhteisen McGuffin Room Index -huoneen, jossa on item-logiikka.
+6. Pelaaja saa mcguffinin huoneen tapahtumasta.
+7. Kutsu AddMcGuffin("Teippi") RoomManagerin kautta.
+8. Pelaaja palaa hahmon luo ja dialogi kutsuu CompleteActiveTask("Teippi").
+9. TaskHolder tarkistaa, etta mcguffin on oikea, kuluttaa sen ja merkitsee
+     tehtavan suoritetuksi.
+10. Esc- tai Backspace-nappain sulkee huoneen. Kun hahmon huone
+     avataan uudelleen, seuraava keskenerainen tehtava avaa seuraavan huoneen.
+
+INSPECTOR-ASETUKSET
+
+Bootstrap-scenessa:
+- TaskHolder.characters: lisaa jokainen hahmo omaksi Character Routeksi.
+- Character Name: hahmon nimi, jota SelectCharacter kayttaa.
+- McGuffin Room Index: yhteinen Misc-huone, jossa item-tarkistus tapahtuu.
+- Tasks: tehtavat jarjestyksessa 0, 1, 2, 3.
+
+Jokaiselle Task Routelle:
 - Task Name: tehtavan nimi.
-- Is Completed: tehtavan alkutila.
+- Is Completed: tehtavan alkutila, normaalisti pois paalta.
+- Room Index: hahmon tehtavahuone, jossa tehtava annetaan.
+- Required McGuffin: esineen nimi, esimerkiksi Teippi.
 
-Huoneindeksin tarkistus:
-1. Valitse Hierarchysta BootstrapSceneManager.
-2. Katso Inspectorista Room Scenes -lista.
-3. Element 0 tarkoittaa listan ensimmaista huonetta, Element 1 toista jne.
-4. Aseta hahmon Misc Room Index samaksi numeroksi kuin huoneen Element-numero.
+HUONEINDEKSIT
+
+Room Index viittaa suoraan BootstrapSceneManagerin Room Scenes -listan
+elementtiin. Se ei ole enum-arvo eika Project-ikkunan jarjestysnumero.
 
 Esimerkki:
-- BootstrapSceneManager -> Room Scenes -> Element 0 = Franky Misc
-- Franky -> Misc Room Index = 0
+- BootstrapSceneManager -> Room Scenes -> Element 1 = Franky tehtava 1
+- Franky -> Tasks -> Element 0 -> Room Index = 1
+- Franky -> Tasks -> Element 0 -> Required McGuffin = Teippi
 
-Misc Room Index ei ole enum-arvo eika Project-ikkunan jarjestys. Se viittaa
-suoraan BootstrapSceneManagerin Room Scenes -listan elementtiin.
+MISC-HUONEEN DIALOGI-EVENTIT
 
-Metodit:
-- SelectCharacter("Franky"): valitsee hahmon Misc-huonetta varten.
-- OpenActiveCharacterMiscRoom(): avaa aktiivisen hahmon oman Misc-huoneen.
-- OpenMiscRoomForCharacter("Franky"): valitsee hahmon ja avaa sen Misc-huoneen.
-- IsActiveCharacterTaskCompleted(0): kertoo tehtavan tilan.
+Misc-huoneen RoomManager toimii UnityEvent-siltana Bootstrapin TaskHolderiin:
+- RoomManager.AddMcGuffin("Teippi") lisaa mcguffinin pelaajalle.
+- RoomManager.OpenActiveTaskMiscRoom() avaa yhteisen Misc-huoneen tehtavan
+    antamisen jalkeen.
+- RoomManager.CompleteActiveTask("Teippi") yrittää suorittaa aktiivisen
+    hahmon seuraavan tehtavan.
+
+CompleteActiveTask onnistuu vain, jos:
+- aktiivinen hahmo ja keskenerainen tehtava loytyvat;
+- tehtavan Required McGuffin vastaa annettua nimea;
+- pelaajalla on kyseinen mcguffin.
+
+Onnistumisen jalkeen mcguffin poistetaan ja tehtava merkitään valmiiksi.
+Pelaaja jaa nykyiseen huoneeseen, jotta han voi palata huoneesta normaalisti.
+
+KAYTETTAVAT METODIT
+
+- SelectCharacter("Franky"): valitsee aktiivisen hahmon.
+- OpenActiveCharacterMiscRoom(): avaa seuraavan keskeneraisen tehtavan huoneen.
+- OpenActiveTaskMiscRoom(): aktivoi tehtavan ja avaa yhteisen Misc-huoneen.
+- OpenMiscRoomForCharacter("Franky"): valitsee hahmon ja avaa sen huoneen.
+- AddMcGuffin("Teippi"): lisaa mcguffinin, jos sita ei viela ole.
+- HasMcGuffin("Teippi"): tarkistaa, loytyyko mcguffin pelaajalta.
+- TryCompleteActiveTask("Teippi"): tarkistaa mcguffinin ja suorittaa tehtavan.
+- IsActiveCharacterTaskCompleted(0): kertoo tietyn tehtavan tilan.
 - AreAllActiveCharacterTasksCompleted(): kertoo, ovatko kaikki tehtavat valmiit.
-- HasActiveCharacterTasksUnderway(): kertoo, onko jokin tehtava kesken.
-- CompleteTask(0): merkitsee aktiivisen hahmon tehtavan valmiiksi.
+- HasActiveCharacterTasksUnderway(): kertoo, onko tehtavia viela kesken.
+- CompleteTask(0): merkitsee tehtavan valmiiksi ilman mcguffin-tarkistusta.
 
-Tallennus:
-- CreateSaveData() tekee JsonUtilitylle sopivan datan.
-- LoadSaveData(data) palauttaa tallennetut tilat.
-- Gamedata tallentaa TaskHolderSaveData-tiedon PlayerDataan.
+TALLENNUS
 
-=== END README ===
+Gamedata tallentaa TaskHolderin TaskHolderSaveData-tiedon PlayerDataan.
+Tallennukseen kuuluvat:
+- aktiivinen hahmo;
+- jokaisen hahmon tehtavien valmistumistila;
+- pelaajan keratyt mcguffinit.
+
+CreateSaveData() muodostaa JsonUtilitylle sopivan datan.
+LoadSaveData(data) palauttaa tallennetut tehtavat ja mcguffinit.
+
+=== END TASKHOLDER README ===
 */
 public class TaskHolder : MonoBehaviour
 {
+    public static TaskHolder Instance { get; private set; }
+
     [Serializable]
     private class TaskRoute
     {
         [SerializeField] private string taskName;
         [SerializeField] private bool isCompleted;
+        [SerializeField] private int roomIndex = -1;
+        [SerializeField] private string requiredMcGuffin;
 
         public bool IsCompleted => isCompleted;
+        public int RoomIndex => roomIndex;
+        public string RequiredMcGuffin => requiredMcGuffin;
 
         public void SetCompleted(bool completed)
         {
@@ -79,12 +139,19 @@ public class TaskHolder : MonoBehaviour
     private class CharacterRoute
     {
         [SerializeField] private string characterName;
-        [SerializeField] private int miscRoomIndex = -1;
         [SerializeField] private TaskRoute[] tasks;
+        [SerializeField] private bool activeTaskAccepted;
+        [SerializeField] private int miscRoomIndex = -1;
 
         public string CharacterName => characterName;
         public int MiscRoomIndex => miscRoomIndex;
         public TaskRoute[] Tasks => tasks;
+        public bool ActiveTaskAccepted => activeTaskAccepted;
+
+        public void SetActiveTaskAccepted(bool accepted)
+        {
+            activeTaskAccepted = accepted;
+        }
 
         public CharacterTaskSaveData CreateSaveData()
         {
@@ -95,13 +162,33 @@ public class TaskHolder : MonoBehaviour
             return new CharacterTaskSaveData
             {
                 characterName = characterName,
-                completedTasks = completedTasks
+                completedTasks = completedTasks,
+                activeTaskAccepted = activeTaskAccepted
             };
         }
     }
 
     [SerializeField] private CharacterRoute[] characters;
     [SerializeField] private int activeCharacterIndex;
+    [SerializeField] private string[] collectedMcGuffins = Array.Empty<string>();
+    private int activeTaskCharacterIndex = -1;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+            Instance = null;
+    }
 
     public string ActiveCharacterName
     {
@@ -145,9 +232,16 @@ public class TaskHolder : MonoBehaviour
             return;
         }
 
-        if (character.MiscRoomIndex < 0)
+        if (activeTaskCharacterIndex >= 0 && activeTaskCharacterIndex != activeCharacterIndex)
         {
-            Debug.LogError($"Character '{character.CharacterName}' does not have a valid Misc room index.");
+            OpenCharacterMiscRoom(character);
+            return;
+        }
+
+        int taskIndex = GetNextTaskIndex(character);
+        if (taskIndex < 0)
+        {
+            OpenCharacterMiscRoom(character);
             return;
         }
 
@@ -157,7 +251,85 @@ public class TaskHolder : MonoBehaviour
             return;
         }
 
-        BootstrapSceneManager.Instance.LoadRoom(character.MiscRoomIndex);
+        if (character.ActiveTaskAccepted && !HasRequiredMcGuffin(character, taskIndex))
+        {
+            OpenCharacterMiscRoom(character);
+            return;
+        }
+
+        int roomIndex = GetTaskRoomIndex(character, taskIndex);
+        if (roomIndex < 0)
+        {
+            Debug.LogError($"Character '{character.CharacterName}' does not have a valid task room index.");
+            return;
+        }
+
+        BootstrapSceneManager.Instance.LoadRoom(roomIndex);
+    }
+
+    public void OpenActiveTaskMiscRoom()
+    {
+        if (!TryGetActiveCharacter(out CharacterRoute character))
+        {
+            Debug.LogError("No active character is configured.");
+            return;
+        }
+
+        int taskIndex = GetNextTaskIndex(character);
+        if (taskIndex < 0)
+        {
+            Debug.Log($"All tasks for '{character.CharacterName}' are completed.");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(character.Tasks[taskIndex].RequiredMcGuffin))
+            character.Tasks[taskIndex].SetCompleted(true);
+
+        taskIndex = GetNextTaskIndex(character);
+        if (taskIndex < 0)
+            return;
+
+        character.SetActiveTaskAccepted(true);
+        activeTaskCharacterIndex = activeCharacterIndex;
+    }
+
+    public void AddMcGuffin(string mcGuffinName)
+    {
+        if (string.IsNullOrWhiteSpace(mcGuffinName) || HasMcGuffin(mcGuffinName))
+            return;
+
+        List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
+        items.Add(mcGuffinName.Trim());
+        collectedMcGuffins = items.ToArray();
+    }
+
+    public bool HasMcGuffin(string mcGuffinName)
+    {
+        return !string.IsNullOrWhiteSpace(mcGuffinName) &&
+            Array.Exists(collectedMcGuffins ?? Array.Empty<string>(), item =>
+                string.Equals(item, mcGuffinName.Trim(), StringComparison.OrdinalIgnoreCase));
+    }
+
+    public bool TryCompleteActiveTask(string mcGuffinName)
+    {
+        if (!TryGetActiveCharacter(out CharacterRoute character))
+            return false;
+
+        int taskIndex = GetNextTaskIndex(character);
+        if (taskIndex < 0 || !character.ActiveTaskAccepted ||
+            !string.Equals(character.Tasks[taskIndex].RequiredMcGuffin, mcGuffinName,
+            StringComparison.OrdinalIgnoreCase) ||
+            !HasMcGuffin(mcGuffinName))
+        {
+            Debug.LogWarning($"McGuffin '{mcGuffinName}' does not complete the active task.");
+            return false;
+        }
+
+        SetTaskCompleted(taskIndex, true);
+        character.SetActiveTaskAccepted(false);
+        activeTaskCharacterIndex = -1;
+        RemoveMcGuffin(mcGuffinName);
+        return true;
     }
 
     public void OpenMiscRoomForCharacter(string characterName)
@@ -211,32 +383,110 @@ public class TaskHolder : MonoBehaviour
         return new TaskHolderSaveData
         {
             activeCharacterName = ActiveCharacterName,
-            characters = saveCharacters
+            activeTaskCharacterName = characters != null && activeTaskCharacterIndex >= 0 && activeTaskCharacterIndex < characters.Length
+                ? characters[activeTaskCharacterIndex]?.CharacterName
+                : string.Empty,
+            characters = saveCharacters,
+            collectedMcGuffins = collectedMcGuffins
         };
     }
 
     public void LoadSaveData(TaskHolderSaveData saveData)
     {
-        if (saveData?.characters == null || characters == null)
+        if (saveData == null || characters == null)
             return;
 
         if (!string.IsNullOrEmpty(saveData.activeCharacterName))
             SelectCharacter(saveData.activeCharacterName);
 
-        foreach (CharacterTaskSaveData savedCharacter in saveData.characters)
+        activeTaskCharacterIndex = -1;
+        if (!string.IsNullOrEmpty(saveData.activeTaskCharacterName) &&
+            TryGetCharacterIndex(saveData.activeTaskCharacterName, out int taskCharacterIndex))
         {
-            if (savedCharacter == null || !TryGetCharacter(savedCharacter.characterName, out CharacterRoute character))
-                continue;
+            activeTaskCharacterIndex = taskCharacterIndex;
+        }
 
-            if (savedCharacter.completedTasks == null || character.Tasks == null)
-                continue;
-
-            for (int taskIndex = 0; taskIndex < character.Tasks.Length && taskIndex < savedCharacter.completedTasks.Length; taskIndex++)
+        if (saveData.characters != null)
+        {
+            foreach (CharacterTaskSaveData savedCharacter in saveData.characters)
             {
-                if (character.Tasks[taskIndex] != null)
-                    character.Tasks[taskIndex].SetCompleted(savedCharacter.completedTasks[taskIndex]);
+                if (savedCharacter == null || !TryGetCharacter(savedCharacter.characterName, out CharacterRoute character))
+                    continue;
+
+                character.SetActiveTaskAccepted(savedCharacter.activeTaskAccepted);
+                if (activeTaskCharacterIndex < 0 && savedCharacter.activeTaskAccepted &&
+                    TryGetCharacterIndex(savedCharacter.characterName, out int legacyTaskCharacterIndex))
+                {
+                    activeTaskCharacterIndex = legacyTaskCharacterIndex;
+                }
+
+                if (savedCharacter.completedTasks == null || character.Tasks == null)
+                    continue;
+
+                for (int taskIndex = 0; taskIndex < character.Tasks.Length && taskIndex < savedCharacter.completedTasks.Length; taskIndex++)
+                {
+                    if (character.Tasks[taskIndex] != null)
+                        character.Tasks[taskIndex].SetCompleted(savedCharacter.completedTasks[taskIndex]);
+                }
             }
         }
+
+        collectedMcGuffins = saveData.collectedMcGuffins ?? Array.Empty<string>();
+    }
+
+    private int GetNextTaskIndex(CharacterRoute character)
+    {
+        if (character.Tasks == null)
+            return -1;
+
+        for (int taskIndex = 0; taskIndex < character.Tasks.Length; taskIndex++)
+        {
+            if (character.Tasks[taskIndex] != null && !character.Tasks[taskIndex].IsCompleted)
+                return taskIndex;
+        }
+
+        return -1;
+    }
+
+    private int GetTaskRoomIndex(CharacterRoute character, int taskIndex)
+    {
+        if (character.Tasks == null || taskIndex < 0 || taskIndex >= character.Tasks.Length ||
+            character.Tasks[taskIndex] == null)
+        {
+            return -1;
+        }
+
+        return character.Tasks[taskIndex].RoomIndex;
+    }
+
+    private bool HasRequiredMcGuffin(CharacterRoute character, int taskIndex)
+    {
+        return character.Tasks != null && taskIndex >= 0 && taskIndex < character.Tasks.Length &&
+            character.Tasks[taskIndex] != null && HasMcGuffin(character.Tasks[taskIndex].RequiredMcGuffin);
+    }
+
+    private void OpenCharacterMiscRoom(CharacterRoute character)
+    {
+        if (character.MiscRoomIndex < 0)
+        {
+            Debug.LogError($"Misc Room Index is not configured for '{character.CharacterName}'.");
+            return;
+        }
+
+        if (BootstrapSceneManager.Instance == null)
+        {
+            Debug.LogError("BootstrapSceneManager is not available.");
+            return;
+        }
+
+        BootstrapSceneManager.Instance.LoadRoom(character.MiscRoomIndex);
+    }
+
+    private void RemoveMcGuffin(string mcGuffinName)
+    {
+        List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
+        items.RemoveAll(item => string.Equals(item, mcGuffinName.Trim(), StringComparison.OrdinalIgnoreCase));
+        collectedMcGuffins = items.ToArray();
     }
 
     private bool TryGetActiveCharacter(out CharacterRoute character)
@@ -261,6 +511,25 @@ public class TaskHolder : MonoBehaviour
                 string.Equals(configuredCharacter.CharacterName, characterName, StringComparison.OrdinalIgnoreCase))
             {
                 character = configuredCharacter;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool TryGetCharacterIndex(string characterName, out int characterIndex)
+    {
+        characterIndex = -1;
+        if (characters == null)
+            return false;
+
+        for (int index = 0; index < characters.Length; index++)
+        {
+            if (characters[index] != null &&
+                string.Equals(characters[index].CharacterName, characterName, StringComparison.OrdinalIgnoreCase))
+            {
+                characterIndex = index;
                 return true;
             }
         }

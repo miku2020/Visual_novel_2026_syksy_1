@@ -42,12 +42,12 @@ public class savebox : MonoBehaviour
 
     public void loadsave()
     {
-        if (gamedata == null)
+        if (gamedata == null || string.IsNullOrWhiteSpace(dir) || string.IsNullOrWhiteSpace(savename))
         {
             Debug.LogError("Save box is not initialized correctly.");
             return;
         }
 
-        gamedata.SetPlayerData(playername, savescore);
+        gamedata.LoadSaveFile(System.IO.Path.Combine(dir, savename + ".json"));
     }
 }

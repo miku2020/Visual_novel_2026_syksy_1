@@ -15,6 +15,8 @@ public class BootstrapSceneManager : MonoBehaviour
 
     private readonly Dictionary<string, AsyncOperationHandle<SceneInstance>> overlayHandles = new(); //O(1) lookup for overlay scenes
     private AsyncOperationHandle<SceneInstance> roomHandle;
+    private Scene returnScene;
+    private int returnRoomIndex = -1;
     private bool isBusy;
 
     public bool IsBusy => isBusy;
@@ -41,6 +43,14 @@ public class BootstrapSceneManager : MonoBehaviour
         }
 
         LoadRoomAsync(roomIndex);
+    }
+
+    public void CloseCurrentRoom()
+    {
+        if (isBusy || !roomHandle.IsValid())
+            return;
+
+        CloseCurrentRoomAsync();
     }
 
     public void LoadSaveLoadScreen()
@@ -79,9 +89,14 @@ public class BootstrapSceneManager : MonoBehaviour
 
         if (roomHandle.IsValid())
         {
+            returnRoomIndex = CurrentRoomIndex;
             await Addressables.UnloadSceneAsync(roomHandle).Task;
             roomHandle = default;
             CurrentRoomIndex = -1;
+        }
+        else
+        {
+            returnScene = SceneManager.GetActiveScene();
         }
 
         AsyncOperationHandle<SceneInstance> newRoomHandle =
@@ -100,6 +115,31 @@ public class BootstrapSceneManager : MonoBehaviour
         CurrentRoomIndex = roomIndex;
         SceneManager.SetActiveScene(roomHandle.Result.Scene);
         isBusy = false;
+    }
+
+    private async void CloseCurrentRoomAsync()
+    {
+        int roomIndexToReturnTo = returnRoomIndex;
+        returnRoomIndex = -1;
+        isBusy = true;
+        await Addressables.UnloadSceneAsync(roomHandle).Task;
+        roomHandle = default;
+        CurrentRoomIndex = -1;
+
+        if (roomIndexToReturnTo >= 0)
+        {
+            isBusy = false;
+            LoadRoom(roomIndexToReturnTo);
+        }
+        else if (returnScene.IsValid())
+        {
+            SceneManager.SetActiveScene(returnScene);
+            isBusy = false;
+        }
+        else
+        {
+            isBusy = false;
+        }
     }
 
     private async void LoadOverlayAsync(AssetReference sceneReference, string overlayId)
