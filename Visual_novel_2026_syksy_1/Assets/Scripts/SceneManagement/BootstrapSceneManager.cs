@@ -12,6 +12,7 @@ public class BootstrapSceneManager : MonoBehaviour
     [SerializeField] private AssetReference[] roomScenes = new AssetReference[6];
     [SerializeField] private AssetReference saveLoadScene;
     [SerializeField] private AssetReference toriScene;
+    [SerializeField] private AssetReference detailsWindowScene;
 
     private readonly Dictionary<string, AsyncOperationHandle<SceneInstance>> overlayHandles = new(); //O(1) lookup for overlay scenes
     private AsyncOperationHandle<SceneInstance> roomHandle;
@@ -20,6 +21,7 @@ public class BootstrapSceneManager : MonoBehaviour
     private bool isBusy;
 
     public bool IsBusy => isBusy;
+    public bool IsDetailWindowOpen => overlayHandles.ContainsKey("Details");
     public int CurrentRoomIndex { get; private set; } = -1;
 
     private void Awake()
@@ -71,6 +73,16 @@ public class BootstrapSceneManager : MonoBehaviour
     public void CloseToriUI()
     {
         UnloadOverlayAsync("Tori");
+    }
+
+    public void OpenDetailWindow()
+    {
+        LoadOverlayAsync(detailsWindowScene, "Details");
+    }
+
+    public void CloseDetailWindow()
+    {
+        UnloadOverlayAsync("Details");
     }
 
     private async void LoadRoomAsync(int roomIndex)

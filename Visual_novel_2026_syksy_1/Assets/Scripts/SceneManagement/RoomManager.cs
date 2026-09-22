@@ -23,6 +23,11 @@ public class RoomManager : MonoBehaviour
         if (Keyboard.current.escapeKey.wasPressedThisFrame ||
             Keyboard.current.backspaceKey.wasPressedThisFrame)
         {
+            if (BootstrapSceneManager.Instance.IsDetailWindowOpen)
+            {
+                return;
+            }
+
             BootstrapSceneManager.Instance.CloseCurrentRoom();
         }
     }
