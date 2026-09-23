@@ -310,6 +310,25 @@ public class TaskHolder : MonoBehaviour
                 string.Equals(item, mcGuffinName.Trim(), StringComparison.OrdinalIgnoreCase));
     }
 
+    public bool HasActiveTaskForActiveCharacter()
+    {
+        return TryGetActiveCharacter(out CharacterRoute character) &&
+            activeTaskCharacterIndex == activeCharacterIndex &&
+            character.ActiveTaskAccepted &&
+            GetNextTaskIndex(character) >= 0;
+    }
+
+    public bool HasMcGuffinForActiveTask()
+    {
+        if (!HasActiveTaskForActiveCharacter() ||
+            !TryGetActiveCharacter(out CharacterRoute character))
+        {
+            return false;
+        }
+
+        return HasRequiredMcGuffin(character, GetNextTaskIndex(character));
+    }
+
     public bool TryCompleteActiveTask(string mcGuffinName)
     {
         if (!TryGetActiveCharacter(out CharacterRoute character))
