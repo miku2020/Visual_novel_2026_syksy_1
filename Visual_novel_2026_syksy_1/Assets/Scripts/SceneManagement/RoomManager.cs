@@ -28,6 +28,12 @@ public class RoomManager : MonoBehaviour
                 return;
             }
 
+            if (BootstrapSceneManager.Instance.IsToriOpen)
+            {
+                BootstrapSceneManager.Instance.CloseToriUI();
+                return;
+            }
+
             BootstrapSceneManager.Instance.CloseCurrentRoom();
         }
     }
@@ -96,5 +102,16 @@ public class RoomManager : MonoBehaviour
         }
 
         BootstrapSceneManager.Instance.OpenDetailWindow(characterIndex);
+    }
+
+    public void OpenToriForCharacter(int characterIndex)
+    {
+        if (BootstrapSceneManager.Instance == null)
+        {
+            Debug.LogError("BootstrapSceneManager is not available.");
+            return;
+        }
+
+        BootstrapSceneManager.Instance.LoadToriUI(characterIndex);
     }
 }

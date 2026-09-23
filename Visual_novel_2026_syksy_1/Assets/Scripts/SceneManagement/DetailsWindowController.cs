@@ -5,9 +5,16 @@ using UnityEngine.UI;
 
 public class DetailsWindowController : MonoBehaviour
 {
+    private enum OverlayType
+    {
+        Details,
+        Tori
+    }
+
     [Header("Details")]
     [SerializeField] private RectTransform detailsWindow;
     [SerializeField] private GridLayoutGroup cardsGrid;
+    [SerializeField] private OverlayType overlayType = OverlayType.Details;
 
     [Header("Slide animation")]
     [SerializeField, Min(0.01f)] private float slideDuration = 0.25f;
@@ -134,7 +141,10 @@ public class DetailsWindowController : MonoBehaviour
         if (Keyboard.current.escapeKey.wasPressedThisFrame ||
             Keyboard.current.backspaceKey.wasPressedThisFrame)
         {
-            BootstrapSceneManager.Instance.CloseDetailWindow();
+            if (overlayType == OverlayType.Tori)
+                BootstrapSceneManager.Instance.CloseToriUI();
+            else
+                BootstrapSceneManager.Instance.CloseDetailWindow();
         }
     }
 }
@@ -152,17 +162,19 @@ DETAILS-IKKUNAN KAYTTOONOTTO
 5. Hahmon huoneen Buttonin OnClick-kutsuksi voidaan asettaa:
     RoomManager.OpenDetailsForCharacter(characterIndex)
    jossa characterIndex vastaa detailsWindowScene-taulukon indeksia.
-6. Lisaa Details Sceneen tama DetailsWindowController.
-7. Aseta detailsWindow Details-paneeliin.
-8. Aseta cardsGrid-kenttaan GridLayoutGroup, jossa on kolme saraketta.
-9. Aseta kortit ja niiden tekstit manuaalisesti hahmon omaan Details Sceneen.
+6. Lisaa sama DetailsWindowController myos Tori Sceneen.
+7. Aseta overlayType Inspectorissa: Details Details Sceneille ja Tori Tori Sceneille.
+8. Aseta detailsWindow Details-paneeliin.
+9. Aseta cardsGrid-kenttaan GridLayoutGroup, jossa on kolme saraketta.
+10. Aseta kortit ja niiden tekstit manuaalisesti hahmon omaan Sceneen.
 
 Tämä skripti ei hallitse korttien tekstejä, painikkeita tai näkyvyyttä.
 Tekstit, "Näytä lisää" -painike ja lisäsisällön näkyvyys asetetaan kokonaan
 manuaalisesti Unity Editorissa. Skripti hallitsee vain Details-ikkunan avaamista,
 sulkemista ja korttien kolmen sarakkeen ruudukkoa.
 
-Details Scene suljetaan BootstrapSceneManager.CloseDetailWindow()-metodilla.
-Esc tai Backspace sulkee Details Scenen. Seuraava painallus sulkee huoneen.
+Details-tilassa Escape tai Backspace sulkee Details Scenen.
+Tori-tilassa Escape tai Backspace sulkee Tori Scenen.
+Skripti valitsee sulkemismetodin overlayType-asetuksen perusteella.
 
 === End ===*/

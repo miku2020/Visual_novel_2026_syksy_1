@@ -202,16 +202,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145870112}
-        m_TargetAssemblyTypeName: BootstrapSceneManager, Assembly-CSharp
-        m_MethodName: LoadRoom
-        m_Mode: 3
+      - m_Target: {fileID: 145870114}
+        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+        m_MethodName: SelectCharacterAndOpenMiscRoom
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Dash
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &9215988
@@ -545,14 +545,94 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  - m_AssetGUID: df860806f7190844b85687f8a613708d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: e195d7fdeb9b8084984c29f853d302d4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: c0d13e931fdb3b148b367a2884582fcb
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 5abba1cfb36d2004598632cde40978d8
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3879820fdec7ec3488338288345875c1
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: fe4ece2fd04aa5a459e46d95f4c1eb90
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 4823bdfb8a9b4804184e06b87ff23c36
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: cecb6392f31be9c489e49236d15663bc
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 001aa51a8431fd84399de9d9b0433589
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: c03ad7ae8f7f061439b3bdd726aee85b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   saveLoadScene:
     m_AssetGUID: ee3b082e6aad62f47ab5f3c04793e037
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  toriScene:
-    m_AssetGUID: 
+  toriScenes:
+  - m_AssetGUID: 6c73da42f47f212438717d5d9db9edc0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
@@ -1154,7 +1234,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Franky
+          m_StringArgument: Mirai
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &494403251
@@ -1844,15 +1924,15 @@ MonoBehaviour:
     - taskName: "Kyn\xE4"
       isCompleted: 0
       roomIndex: 2
-      requiredMcGuffin: "Kyn\xE4"
+      requiredMcGuffin: Atrology book
     - taskName: 
       isCompleted: 0
       roomIndex: 3
-      requiredMcGuffin: 
+      requiredMcGuffin: Hand Sanitizer
     - taskName: 
       isCompleted: 0
       roomIndex: 4
-      requiredMcGuffin: 
+      requiredMcGuffin: Hair Straightener
     activeTaskAccepted: 0
     miscRoomIndex: 0
   - characterName: Franky
@@ -1864,15 +1944,15 @@ MonoBehaviour:
     - taskName: kirja
       isCompleted: 0
       roomIndex: 7
-      requiredMcGuffin: Kirja
+      requiredMcGuffin: Big Mick
     - taskName: 
       isCompleted: 0
       roomIndex: 8
-      requiredMcGuffin: 
+      requiredMcGuffin: HyperBolic Item
     - taskName: 
       isCompleted: 0
       roomIndex: 9
-      requiredMcGuffin: 
+      requiredMcGuffin: Shovel
     activeTaskAccepted: 0
     miscRoomIndex: 5
   - characterName: Napalm
@@ -1888,51 +1968,91 @@ MonoBehaviour:
     - taskName: 
       isCompleted: 0
       roomIndex: 13
-      requiredMcGuffin: 
+      requiredMcGuffin: Multitool
     - taskName: 
       isCompleted: 0
       roomIndex: 14
-      requiredMcGuffin: 
+      requiredMcGuffin: Locket Necklace
     activeTaskAccepted: 0
     miscRoomIndex: 10
   - characterName: Sam
     tasks:
     - taskName: intro
       isCompleted: 0
-      roomIndex: 11
+      roomIndex: 16
       requiredMcGuffin: 
     - taskName: 
       isCompleted: 0
-      roomIndex: 12
-      requiredMcGuffin: 
+      roomIndex: 17
+      requiredMcGuffin: Eragon BooK
     - taskName: 
       isCompleted: 0
-      roomIndex: 13
-      requiredMcGuffin: 
+      roomIndex: 18
+      requiredMcGuffin: Nintendo DS SD card
     - taskName: 
       isCompleted: 0
-      roomIndex: 14
-      requiredMcGuffin: 
+      roomIndex: 19
+      requiredMcGuffin: Sketchbook
     activeTaskAccepted: 0
-    miscRoomIndex: 10
+    miscRoomIndex: 15
   - characterName: Woyd
     tasks:
     - taskName: intro
       isCompleted: 0
-      roomIndex: 11
+      roomIndex: 21
       requiredMcGuffin: 
     - taskName: 
       isCompleted: 0
-      roomIndex: 12
+      roomIndex: 22
+      requiredMcGuffin: Gay Pride Flag
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 23
+      requiredMcGuffin: Genshin Impact Poster
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 24
+      requiredMcGuffin: Drawing Tablet
+    activeTaskAccepted: 0
+    miscRoomIndex: 20
+  - characterName: Mirai
+    tasks:
+    - taskName: intro
+      isCompleted: 0
+      roomIndex: 31
       requiredMcGuffin: 
     - taskName: 
       isCompleted: 0
-      roomIndex: 13
+      roomIndex: 32
+      requiredMcGuffin: Stargate DvDs
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 33
+      requiredMcGuffin: Animatrix Digipak
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 34
+      requiredMcGuffin: Lightsaber
+    activeTaskAccepted: 0
+    miscRoomIndex: 30
+  - characterName: Dash
+    tasks:
+    - taskName: intro
+      isCompleted: 0
+      roomIndex: 26
       requiredMcGuffin: 
     - taskName: 
       isCompleted: 0
-      roomIndex: 14
-      requiredMcGuffin: 
+      roomIndex: 27
+      requiredMcGuffin: Sunglasses
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 28
+      requiredMcGuffin: headphones
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 29
+      requiredMcGuffin: PCzza
     activeTaskAccepted: 0
     miscRoomIndex: 10
   activeCharacterIndex: 0
@@ -2690,9 +2810,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Room 7
-
-'
+  m_text: Dash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3183,7 +3301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 614, y: -278}
+  m_AnchoredPosition: {x: 641, y: -246}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2008455957
@@ -3337,7 +3455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Room 6
+  m_text: 'Mirai
 
 '
   m_isRightToLeft: 0
