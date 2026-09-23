@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: a7a0be87f312a274a9fadaad6b961f6d
   m_SerializeEntries:
+  - m_GUID: 001aa51a8431fd84399de9d9b0433589
+    m_Address: Assets/Scenes/Rooms/Mirai 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0a37c2b2f2b3c434a8dc114ba83bfc40
     m_Address: Assets/Scenes/Rooms/Franky 4.unity
     m_ReadOnly: 0
@@ -45,8 +50,23 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3879820fdec7ec3488338288345875c1
+    m_Address: Assets/Scenes/Rooms/Dash 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4823bdfb8a9b4804184e06b87ff23c36
+    m_Address: Assets/Scenes/Rooms/Mirai 1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 545f9731f24d1e740905ea7431ce2b8e
     m_Address: Assets/Scenes/Rooms/Franky 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5abba1cfb36d2004598632cde40978d8
+    m_Address: Assets/Scenes/Rooms/Dash 3.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -155,6 +175,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c03ad7ae8f7f061439b3bdd726aee85b
+    m_Address: Assets/Scenes/Rooms/Mirai 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0d13e931fdb3b148b367a2884582fcb
+    m_Address: Assets/Scenes/Rooms/Dash 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cecb6392f31be9c489e49236d15663bc
+    m_Address: Assets/Scenes/Rooms/Mirai 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cf96fdd2c94b51c4d89b20a1c0e07259
     m_Address: Assets/Scenes/Rooms/Franky 3.unity
     m_ReadOnly: 0
@@ -165,8 +200,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df860806f7190844b85687f8a613708d
+    m_Address: Assets/Scenes/Rooms/Dash 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e103b5d40f3b2c642a7145d8c0bf99a2
     m_Address: Assets/Scenes/Rooms/Sam 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e195d7fdeb9b8084984c29f853d302d4
+    m_Address: Assets/Scenes/Rooms/Dash 1.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -202,6 +247,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc2133c77fb701f4d9eb4ffa1fec7250
     m_Address: Assets/Scenes/Rooms/Franky 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe4ece2fd04aa5a459e46d95f4c1eb90
+    m_Address: Assets/Scenes/Rooms/Mirai 0.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
