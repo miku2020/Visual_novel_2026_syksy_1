@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c73da42f47f212438717d5d9db9edc0
+    m_Address: Assets/Scenes/ToriWindows/ElloTori.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 71175144bfc63d64c9283d21c8f3a3d4
     m_Address: Assets/Scenes/Rooms/Franky 1.unity
     m_ReadOnly: 0

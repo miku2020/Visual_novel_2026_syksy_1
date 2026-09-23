@@ -11,7 +11,7 @@ public class BootstrapSceneManager : MonoBehaviour
 
     [SerializeField] private AssetReference[] roomScenes = new AssetReference[6];
     [SerializeField] private AssetReference saveLoadScene;
-    [SerializeField] private AssetReference toriScene;
+    [SerializeField] private AssetReference[] toriScenes = new AssetReference[7];
     [SerializeField] private AssetReference[] detailsWindowScene = new AssetReference[7];
 
     private readonly Dictionary<string, AsyncOperationHandle<SceneInstance>> overlayHandles = new(); //O(1) lookup for overlay scenes
@@ -22,6 +22,7 @@ public class BootstrapSceneManager : MonoBehaviour
 
     public bool IsBusy => isBusy;
     public bool IsDetailWindowOpen => overlayHandles.ContainsKey("Details");
+    public bool IsToriOpen => overlayHandles.ContainsKey("Tori");
     public int CurrentRoomIndex { get; private set; } = -1;
 
     private void Awake()
@@ -67,7 +68,18 @@ public class BootstrapSceneManager : MonoBehaviour
 
     public void LoadToriUI()
     {
-        LoadOverlayAsync(toriScene, "Tori");
+        LoadToriUI(0);
+    }
+
+    public void LoadToriUI(int characterIndex)
+    {
+        if (toriScenes == null || characterIndex < 0 || characterIndex >= toriScenes.Length)
+        {
+            Debug.LogError($"Tori scene index {characterIndex} is outside the configured Tori scene list.");
+            return;
+        }
+
+        LoadOverlayAsync(toriScenes[characterIndex], "Tori");
     }
 
     public void CloseToriUI()
