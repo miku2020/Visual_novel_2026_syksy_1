@@ -1,23 +1,13 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DetailsWindowController : MonoBehaviour
 {
-    [System.Serializable]
-    private class DetailCard
-    {
-        public string title = string.Empty;
-        public TMP_Text titleText;
-        public TMP_Dropdown dropdown;
-    }
-
     [Header("Details")]
     [SerializeField] private RectTransform detailsWindow;
     [SerializeField] private GridLayoutGroup cardsGrid;
-    [SerializeField] private DetailCard[] detailCards = new DetailCard[15];
 
     [Header("Slide animation")]
     [SerializeField, Min(0.01f)] private float slideDuration = 0.25f;
@@ -48,7 +38,6 @@ public class DetailsWindowController : MonoBehaviour
 
         openPosition = detailsWindow.anchoredPosition;
         ConfigureGrid();
-        ConfigureDetailCards();
     }
 
     private void Start()
@@ -95,30 +84,6 @@ public class DetailsWindowController : MonoBehaviour
 
         CloseDetails();
         return true;
-    }
-
-    private void ConfigureDetailCards()
-    {
-        if (detailCards == null)
-            return;
-
-        for (int cardIndex = 0; cardIndex < detailCards.Length; cardIndex++)
-        {
-            DetailCard card = detailCards[cardIndex];
-            if (card == null)
-                continue;
-
-            if (card.titleText != null)
-                card.titleText.text = card.title;
-
-            if (card.dropdown == null)
-            {
-                Debug.LogWarning($"Details card {cardIndex + 1} has no TMP_Dropdown assigned.", this);
-                continue;
-            }
-
-            card.dropdown.interactable = card.dropdown.options.Count > 0;
-        }
     }
 
     private void ConfigureGrid()
@@ -182,27 +147,20 @@ DETAILS-IKKUNAN KAYTTOONOTTO
 2. Lisaa Details Scene Addressables-jarjestelmaan.
 3. Aseta Details Scene BootstrapSceneManagerin
     Details Window Scene -AssetReference-kenttaan.
-4. Buttonin ainoa OnClick-kutsu on:
-    BootstrapSceneManager.OpenDetailWindow()
-5. Lisaa Details Sceneen tama DetailsWindowController.
-6. Aseta detailsWindow Details-paneeliin.
-7. Aseta cardsGrid-kenttaan GridLayoutGroup, jossa on kolme saraketta.
-8. Aseta detailCards-taulukkoon 15 korttia.
+4. Aseta BootstrapSceneManagerin detailsWindowScene-taulukkoon
+   yksi Addressable-Details Scene jokaista hahmoa varten.
+5. Hahmon huoneen Buttonin OnClick-kutsuksi voidaan asettaa:
+    RoomManager.OpenDetailsForCharacter(characterIndex)
+   jossa characterIndex vastaa detailsWindowScene-taulukon indeksia.
+6. Lisaa Details Sceneen tama DetailsWindowController.
+7. Aseta detailsWindow Details-paneeliin.
+8. Aseta cardsGrid-kenttaan GridLayoutGroup, jossa on kolme saraketta.
+9. Aseta kortit ja niiden tekstit manuaalisesti hahmon omaan Details Sceneen.
 
-Jokaisella kortilla on oma:
-- title
-- titleText
-- dropdown
-
-Dropdownin vaihtoehdot asetetaan suoraan kortin prefabissa olevan
-TMP_Dropdown-komponentin Options-listaan. Erillista options-taulukkoa
-ei tarvita.
-
-Esimerkiksi yhdella kortilla voi olla vaihtoehdot:
-Musta, Puna, Vihree
-
-Ja toisella:
-Musta, Crimson-red, Dark-electric-blue, Forest-green
+Tämä skripti ei hallitse korttien tekstejä, painikkeita tai näkyvyyttä.
+Tekstit, "Näytä lisää" -painike ja lisäsisällön näkyvyys asetetaan kokonaan
+manuaalisesti Unity Editorissa. Skripti hallitsee vain Details-ikkunan avaamista,
+sulkemista ja korttien kolmen sarakkeen ruudukkoa.
 
 Details Scene suljetaan BootstrapSceneManager.CloseDetailWindow()-metodilla.
 Esc tai Backspace sulkee Details Scenen. Seuraava painallus sulkee huoneen.

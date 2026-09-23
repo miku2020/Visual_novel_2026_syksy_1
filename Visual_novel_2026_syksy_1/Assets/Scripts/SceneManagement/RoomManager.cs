@@ -86,4 +86,15 @@ public class RoomManager : MonoBehaviour
 
         TaskHolder.Instance.OpenActiveCharacterMiscRoom();
     }
+
+    public void OpenDetailsForCharacter(int characterIndex)
+    {
+        if (BootstrapSceneManager.Instance == null)
+        {
+            Debug.LogError("BootstrapSceneManager is not available.");
+            return;
+        }
+
+        BootstrapSceneManager.Instance.OpenDetailWindow(characterIndex);
+    }
 }

@@ -12,7 +12,7 @@ public class BootstrapSceneManager : MonoBehaviour
     [SerializeField] private AssetReference[] roomScenes = new AssetReference[6];
     [SerializeField] private AssetReference saveLoadScene;
     [SerializeField] private AssetReference toriScene;
-    [SerializeField] private AssetReference detailsWindowScene;
+    [SerializeField] private AssetReference[] detailsWindowScene = new AssetReference[7];
 
     private readonly Dictionary<string, AsyncOperationHandle<SceneInstance>> overlayHandles = new(); //O(1) lookup for overlay scenes
     private AsyncOperationHandle<SceneInstance> roomHandle;
@@ -77,7 +77,18 @@ public class BootstrapSceneManager : MonoBehaviour
 
     public void OpenDetailWindow()
     {
-        LoadOverlayAsync(detailsWindowScene, "Details");
+        OpenDetailWindow(0);
+    }
+
+    public void OpenDetailWindow(int characterIndex)
+    {
+        if (detailsWindowScene == null || characterIndex < 0 || characterIndex >= detailsWindowScene.Length)
+        {
+            Debug.LogError($"Details scene index {characterIndex} is outside the configured details scene list.");
+            return;
+        }
+
+        LoadOverlayAsync(detailsWindowScene[characterIndex], "Details");
     }
 
     public void CloseDetailWindow()

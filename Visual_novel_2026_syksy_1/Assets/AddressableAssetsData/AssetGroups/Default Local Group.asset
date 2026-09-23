@@ -175,6 +175,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb7a7fd2d75916942a34f5f43c820b76
+    m_Address: Assets/Scenes/DetailWindows/ElloDetails.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ed0c9e09777ad6a459fffd5f28e767b5
     m_Address: Assets/Scenes/Rooms/Woyd 2.unity
     m_ReadOnly: 0
