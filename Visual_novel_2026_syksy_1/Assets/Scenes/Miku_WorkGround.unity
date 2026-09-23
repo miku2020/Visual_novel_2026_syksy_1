@@ -309,7 +309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Room 2
+  m_text: Franky
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -553,6 +553,42 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   toriScene:
     m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  detailsWindowScene:
+  - m_AssetGUID: eb7a7fd2d75916942a34f5f43c820b76
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
@@ -1260,6 +1296,7 @@ MonoBehaviour:
     - Sanon Moi
     - ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   '
     - ja nyt heihei
+  useTaskHolderGreeting: 0
 --- !u!4 &656466893
 Transform:
   m_ObjectHideFlags: 0
@@ -1499,9 +1536,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Room 4
-
-'
+  m_text: Sam
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1840,6 +1875,66 @@ MonoBehaviour:
       requiredMcGuffin: 
     activeTaskAccepted: 0
     miscRoomIndex: 5
+  - characterName: Napalm
+    tasks:
+    - taskName: intro
+      isCompleted: 0
+      roomIndex: 11
+      requiredMcGuffin: 
+    - taskName: Keys
+      isCompleted: 0
+      roomIndex: 12
+      requiredMcGuffin: Keys
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 13
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 14
+      requiredMcGuffin: 
+    activeTaskAccepted: 0
+    miscRoomIndex: 10
+  - characterName: Sam
+    tasks:
+    - taskName: intro
+      isCompleted: 0
+      roomIndex: 11
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 12
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 13
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 14
+      requiredMcGuffin: 
+    activeTaskAccepted: 0
+    miscRoomIndex: 10
+  - characterName: Woyd
+    tasks:
+    - taskName: intro
+      isCompleted: 0
+      roomIndex: 11
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 12
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 13
+      requiredMcGuffin: 
+    - taskName: 
+      isCompleted: 0
+      roomIndex: 14
+      requiredMcGuffin: 
+    activeTaskAccepted: 0
+    miscRoomIndex: 10
   activeCharacterIndex: 0
   collectedMcGuffins: []
 --- !u!4 &1297044621
@@ -1940,16 +2035,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145870112}
-        m_TargetAssemblyTypeName: BootstrapSceneManager, Assembly-CSharp
-        m_MethodName: LoadRoom
-        m_Mode: 3
+      - m_Target: {fileID: 145870114}
+        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+        m_MethodName: SelectCharacterAndOpenMiscRoom
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 11
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Napalm
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1333150797
@@ -2047,9 +2142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Room 3
-
-'
+  m_text: Napalm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2323,9 +2416,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Room 5
-
-'
+  m_text: Woyd
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

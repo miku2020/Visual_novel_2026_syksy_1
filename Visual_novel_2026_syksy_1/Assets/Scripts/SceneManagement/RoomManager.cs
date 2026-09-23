@@ -23,6 +23,11 @@ public class RoomManager : MonoBehaviour
         if (Keyboard.current.escapeKey.wasPressedThisFrame ||
             Keyboard.current.backspaceKey.wasPressedThisFrame)
         {
+            if (BootstrapSceneManager.Instance.IsDetailWindowOpen)
+            {
+                return;
+            }
+
             BootstrapSceneManager.Instance.CloseCurrentRoom();
         }
     }
@@ -80,5 +85,16 @@ public class RoomManager : MonoBehaviour
         }
 
         TaskHolder.Instance.OpenActiveCharacterMiscRoom();
+    }
+
+    public void OpenDetailsForCharacter(int characterIndex)
+    {
+        if (BootstrapSceneManager.Instance == null)
+        {
+            Debug.LogError("BootstrapSceneManager is not available.");
+            return;
+        }
+
+        BootstrapSceneManager.Instance.OpenDetailWindow(characterIndex);
     }
 }
