@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.size
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[0].sentence
@@ -209,33 +209,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[7].sentence
-      value: "I\u2019ve also been looking for some decent prints of my favourite games. But It\u2019s really difficult when there\u2019s no cons around for a few months."
+      value: Mhm. My cats agree.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[8].sentence
-      value: ' I think I can help you with that. Are those prints of gay games as well?'
+      value: '*gasp* You have cats! So cute! '
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[9].sentence
-      value: Mega gay.
+      value: Yup. They monitor everyone in this building. And they whisper everyone's secrets to me... So you better watch your back.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[10].sentence
-      value: I got you.
+      value: Well that's menacing.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[11].sentence
-      value: "Hmm\u2026 I could do with some milk right about now\u2026"
+      value: Although, uh... They like to tear down my stuff. You know cats... I AM a cat and I like to tear shit down all the time! But I'd appreaciate it if they'd leave my posters alone...
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[12].sentence
-      value: Wh- What was that?
+      value: I'll find you a new poster. Can't guarantee It's cat-safe though.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[13].sentence
-      value: ' I said I could DRINK SOME MILK RIGHT NOW!
-
-'
+      value: No poster is. The price of being a cat owner, I'm afraid.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[14].sentence
@@ -323,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[11].nextEvent.m_PersistentCalls.m_Calls.Array.size
@@ -335,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[13].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[14].nextEvent.m_PersistentCalls.m_Calls.Array.size
@@ -983,19 +981,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Player
+      value: Woyd
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[11].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Elio
-      objectReference: {fileID: 0}
-    - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
-      propertyPath: dialogue.lines.Array.data[12].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: dialogue.lines.Array.data[12].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Woyd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[13].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Elio
+      value: Woyd
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[14].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument

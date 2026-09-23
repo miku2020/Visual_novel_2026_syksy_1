@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[7].sentence
-      value: Thanks man. I decorated it with as much stuff I like as possible.
+      value: Thanks man. I decorated it with as much stuff I like as possible. And then my cats knock it all down.
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.lines.Array.data[8].sentence
