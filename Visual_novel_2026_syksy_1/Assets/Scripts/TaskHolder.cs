@@ -22,6 +22,13 @@ public class CharacterTaskSaveData
 /*
 === TASKHOLDER README ===
 
+Hätänen lisäys
+RoomManager.CompleteActiveTask("Big Mick") ennen kuin uusi tehtävä kutsutaan. ja viimeiseen kenttään ei tartte lisätä uutta misc huonetta.
+
+
+
+
+
 TaskHolder on Bootstrap-scenessa oleva pysyva pelitilan manageri. Se sailyttaa
 aktiivisen hahmon, tehtavien etenemisen ja pelaajan keratyt mcguffinit.
 
@@ -290,6 +297,12 @@ public class TaskHolder : MonoBehaviour
         if (taskIndex < 0)
         {
             Debug.Log($"All tasks for '{character.CharacterName}' are completed.");
+            return;
+        }
+
+        if (character.ActiveTaskAccepted && activeTaskCharacterIndex == activeCharacterIndex)
+        {
+            Debug.LogWarning($"Task for '{character.CharacterName}' is already active. Complete it with CompleteActiveTask before starting another task.");
             return;
         }
 

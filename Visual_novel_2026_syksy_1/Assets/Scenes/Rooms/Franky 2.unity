@@ -323,6 +323,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
@@ -435,6 +439,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1989677950}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1989677952}
@@ -462,6 +470,10 @@ PrefabInstance:
       propertyPath: dialogue.lines.Array.data[0].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1989677952}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[1].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -556,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenActiveCharacterMiscRoom
+      value: OpenActiveTaskMiscRoom
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -579,6 +591,10 @@ PrefabInstance:
       value: set_sprite
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_sprite
       objectReference: {fileID: 0}
@@ -593,6 +609,10 @@ PrefabInstance:
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[9].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CompleteActiveTask
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -663,6 +683,10 @@ PrefabInstance:
       value: UnityEngine.UI.Image, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Franky
       objectReference: {fileID: 0}
@@ -731,6 +755,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4294489684192882256, guid: 36f0a0bc0d1e2e64ea4be44d0b07d3df, type: 3}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Big Mick
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
@@ -797,6 +825,10 @@ PrefabInstance:
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[9].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Sprite, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: dialogue.lines.Array.data[10].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5793312387036989260, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: m_Name
