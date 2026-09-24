@@ -388,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.size
@@ -460,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -529,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1989677950}
+      objectReference: {fileID: 1989677952}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -648,7 +648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: NameChange
+      value: OpenActiveCharacterMiscRoom
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[1].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -732,7 +732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Text_Switch, Assembly-CSharp
+      value: RoomManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -800,7 +800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[10].nextEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Franky
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 188947032312532601, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: dialogue.lines.Array.data[0].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
@@ -958,6 +958,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 273509176314848277, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
   m_PrefabInstance: {fileID: 1989677949}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1989677952 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7309960197570158516, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+  m_PrefabInstance: {fileID: 1989677949}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2990f577ff73a34dbb795f028861669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
