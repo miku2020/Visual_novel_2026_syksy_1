@@ -295,12 +295,18 @@ public class TaskHolder : MonoBehaviour
 
     public void AddMcGuffin(string mcGuffinName)
     {
-        if (string.IsNullOrWhiteSpace(mcGuffinName) || HasMcGuffin(mcGuffinName))
+        if (string.IsNullOrWhiteSpace(mcGuffinName))
             return;
 
-        List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
-        items.Add(mcGuffinName.Trim());
-        collectedMcGuffins = items.ToArray();
+        string trimmedName = mcGuffinName.Trim();
+        if (!HasMcGuffin(trimmedName))
+        {
+            List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
+            items.Add(trimmedName);
+            collectedMcGuffins = items.ToArray();
+        }
+
+        TryCompleteActiveTask(trimmedName);
     }
 
     public bool HasMcGuffin(string mcGuffinName)
@@ -326,7 +332,8 @@ public class TaskHolder : MonoBehaviour
             return false;
         }
 
-        return HasRequiredMcGuffin(character, GetNextTaskIndex(character));
+        string requiredMcGuffin = GetRequiredMcGuffinForActiveTask(character);
+        return !string.IsNullOrWhiteSpace(requiredMcGuffin) && HasMcGuffin(requiredMcGuffin);
     }
 
     public bool TryCompleteActiveTask(string mcGuffinName)
@@ -335,19 +342,30 @@ public class TaskHolder : MonoBehaviour
             return false;
 
         int taskIndex = GetNextTaskIndex(character);
-        if (taskIndex < 0 || !character.ActiveTaskAccepted ||
-            !string.Equals(character.Tasks[taskIndex].RequiredMcGuffin, mcGuffinName,
-            StringComparison.OrdinalIgnoreCase) ||
-            !HasMcGuffin(mcGuffinName))
+        if (taskIndex < 0 || !character.ActiveTaskAccepted)
         {
-            Debug.LogWarning($"McGuffin '{mcGuffinName}' does not complete the active task.");
+            Debug.LogWarning($"No active task is currently accepted for '{character.CharacterName}'.");
+            return false;
+        }
+
+        string requiredMcGuffin = GetRequiredMcGuffinForActiveTask(character);
+        if (string.IsNullOrWhiteSpace(requiredMcGuffin))
+        {
+            Debug.LogWarning($"Task for '{character.CharacterName}' has no required item.");
+            return false;
+        }
+
+        if (!string.Equals(requiredMcGuffin, mcGuffinName, StringComparison.OrdinalIgnoreCase) ||
+            !HasMcGuffin(requiredMcGuffin))
+        {
+            Debug.LogWarning($"Only '{requiredMcGuffin}' can complete the active task for '{character.CharacterName}'.");
             return false;
         }
 
         SetTaskCompleted(taskIndex, true);
         character.SetActiveTaskAccepted(false);
         activeTaskCharacterIndex = -1;
-        RemoveMcGuffin(mcGuffinName);
+        RemoveMcGuffin(requiredMcGuffin);
         return true;
     }
 
@@ -482,6 +500,18 @@ public class TaskHolder : MonoBehaviour
     {
         return character.Tasks != null && taskIndex >= 0 && taskIndex < character.Tasks.Length &&
             character.Tasks[taskIndex] != null && HasMcGuffin(character.Tasks[taskIndex].RequiredMcGuffin);
+    }
+
+    private string GetRequiredMcGuffinForActiveTask(CharacterRoute character)
+    {
+        if (character == null || character.Tasks == null || !character.ActiveTaskAccepted)
+            return string.Empty;
+
+        int taskIndex = GetNextTaskIndex(character);
+        if (taskIndex < 0 || taskIndex >= character.Tasks.Length || character.Tasks[taskIndex] == null)
+            return string.Empty;
+
+        return character.Tasks[taskIndex].RequiredMcGuffin ?? string.Empty;
     }
 
     private void OpenCharacterMiscRoom(CharacterRoute character)
