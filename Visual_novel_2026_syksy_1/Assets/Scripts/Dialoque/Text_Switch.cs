@@ -32,16 +32,28 @@ public class Text_Switch : MonoBehaviour
         }
     }
 
+    private enum GreetingState
+    {
+        Default,
+        HasItem,
+        MissingItem,
+        AllTasksCompleted
+    }
+
     private void SetTaskHolderGreeting()
     {
         if (!useTaskHolderGreeting || TaskHolder.Instance == null || dialogue == null)
             return;
 
-        string greeting = TaskHolder.Instance.HasActiveTaskForActiveCharacter()
-            ? TaskHolder.Instance.HasMcGuffinForActiveTask()
-                ? "moi, kyllä on, olehyvä."
-                : "moi, ei ole"
-            : "moi.";
+        GreetingState state = GetGreetingState();
+
+        string greeting = state switch
+        {
+            GreetingState.HasItem => "moi, kyllä on, olehyvä.",
+            GreetingState.MissingItem => "moi, ei ole",
+            GreetingState.AllTasksCompleted => "moi, kaikki tehtävät on jo suoritettu.",
+            _ => "moi."
+        };
 
         if (dialogue.lines != null && dialogue.lines.Length > 0 && dialogue.lines[0] != null)
         {
@@ -51,6 +63,26 @@ public class Text_Switch : MonoBehaviour
         {
             dialogue.sentences[0] = greeting;
         }
+    }
+
+    private GreetingState GetGreetingState()
+    {
+        if (TaskHolder.Instance == null)
+            return GreetingState.Default;
+
+        if (TaskHolder.Instance.HasActiveTaskForActiveCharacter())
+        {
+            return TaskHolder.Instance.HasMcGuffinForActiveTask()
+                ? GreetingState.HasItem
+                : GreetingState.MissingItem;
+        }
+
+        if (TaskHolder.Instance.AreAllActiveCharacterTasksCompleted())
+        {
+            return GreetingState.AllTasksCompleted;
+        }
+
+        return GreetingState.Default;
     }
 
 }
