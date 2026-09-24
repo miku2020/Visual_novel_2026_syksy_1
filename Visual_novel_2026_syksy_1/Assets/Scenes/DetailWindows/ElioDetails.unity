@@ -319,8 +319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -415.24, y: -162.44}
-  m_SizeDelta: {x: 381.9248, y: 150.51}
+  m_AnchoredPosition: {x: -380, y: -147}
+  m_SizeDelta: {x: 203.1022, y: 69.352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47903914
 MonoBehaviour:
@@ -438,7 +438,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -6}
+  m_AnchoredPosition: {x: -0.000045776367, y: -6}
   m_SizeDelta: {x: 35.0924, y: -31.0703}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87915215
@@ -461,7 +461,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Xenonaut, Homm3, Empire earth, star wars empire at war, Mechwarrior, Stalker. I\u2019m not really a competitive player, so anyone who plays seriously beats me, but generally speaking...Strategy, Action, FPS, ja CooP PVE\r\n\n\n"
+  m_text: ' Nier automata and persona 5, action RPG ja ARPG
+
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -598,7 +601,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Actions speak louder than words
+  m_text: 'Learning
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -712,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8, y: 0.0000076293945}
-  m_SizeDelta: {x: -1.1225, y: -21.7606}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000019073486}
+  m_SizeDelta: {x: -131.8006, y: -30.014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208597590
 MonoBehaviour:
@@ -735,7 +740,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I try to give careful thought to everything I do.
+  m_text: 'Too much
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -928,8 +935,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.19, y: -0.0000076294}
-  m_SizeDelta: {x: -20.3804, y: -30.014}
+  m_AnchoredPosition: {x: -0.000030517578, y: -0.000019073486}
+  m_SizeDelta: {x: -131.8006, y: -30.014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &463352782
 MonoBehaviour:
@@ -951,7 +958,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I don't really mind, because I proudly enjoy the entertainment I consume\u2014regardless of what others say\u2014since I don't give them power over my tastes."
+  m_text: '-'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1209,11 +1216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Electric dark blue
-
-    Crimson red
-
-    Forest green'
+  m_text: Cold violet, red, black/white
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1329,8 +1332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -66.6968, y: 79.928}
-  m_SizeDelta: {x: 284.0154, y: 252.28}
+  m_AnchoredPosition: {x: -44, y: 71}
+  m_SizeDelta: {x: 222.1153, y: 96.8154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520408164
 MonoBehaviour:
@@ -1450,8 +1453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37.233, y: -162.44}
-  m_SizeDelta: {x: 225.09, y: 232.46}
+  m_AnchoredPosition: {x: -44, y: -83}
+  m_SizeDelta: {x: 211.5525, y: 73.5771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548662988
 MonoBehaviour:
@@ -1571,8 +1574,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303.21, y: -109.96}
-  m_SizeDelta: {x: 196.6876, y: 158.97}
+  m_AnchoredPosition: {x: 246.6627, y: -25.2332}
+  m_SizeDelta: {x: 240.7054, y: 225.666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &549439779
 MonoBehaviour:
@@ -1813,8 +1816,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 598.6868, y: -12.6764}
-  m_SizeDelta: {x: 375.5436, y: 118.6428}
+  m_AnchoredPosition: {x: 538.85, y: -16.8031}
+  m_SizeDelta: {x: 255.87, y: 126.8962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &674223729
 MonoBehaviour:
@@ -2033,7 +2036,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The fact that fiction and reality are conflated, or that fictional elements are regulated illogically and without foundation.
+  m_text: 'Almost any clicking sound when I try to concentrate, and the sound of a cat washing itself (I don''t like the noise).
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2149,8 +2154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233.50554, y: 102.03682}
-  m_SizeDelta: {x: 302.4268, y: 235.7263}
+  m_AnchoredPosition: {x: 250.7, y: 175.6292}
+  m_SizeDelta: {x: 248.78, y: 88.5415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792485825
 MonoBehaviour:
@@ -2270,8 +2275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.5566, y: 272.45}
-  m_SizeDelta: {x: 231.9889, y: 105.1}
+  m_AnchoredPosition: {x: -34, y: 290.32}
+  m_SizeDelta: {x: 203.1022, y: 69.352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865372335
 MonoBehaviour:
@@ -2389,7 +2394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -0.000019073486}
+  m_AnchoredPosition: {x: -0.000030518, y: -0.000019073}
   m_SizeDelta: {x: -131.8006, y: -30.014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &996439558
@@ -2412,7 +2417,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '28
+  m_text: '20
 
 
 '
@@ -2552,7 +2557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Stargate, Starship troopers (CGI, movies and 3D anime)\r\nLegend of the Galactic heroes, Psycho pass, Knights of the Sidonia\r\ngenres: Sci-Fi, Psychological horror, action, \r\n "
+  m_text: ' Interstellar and The Hunger Games, scifi '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2666,7 +2671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00010681152, y: 0}
+  m_AnchoredPosition: {x: -0.00011492, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1062229356
@@ -2689,7 +2694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "To start a family, live to a ripe old age, see several generations of my descendants, and be a part of their lives\u2014because parenthood never ends."
+  m_text: Get into university and start a career as an aerospace engineer, with a passion for astronomy as well.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2826,7 +2831,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Italian stew
+  m_text: 'Smoked salmon and mashed potatoes
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2942,8 +2949,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 624.28015, y: -145.62444}
-  m_SizeDelta: {x: 351.6626, y: 66.6009}
+  m_AnchoredPosition: {x: 550, y: -147}
+  m_SizeDelta: {x: 203.1022, y: 69.352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199844157
 MonoBehaviour:
@@ -3084,7 +3091,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Games, computers, anime, TV series, movies, listening to music, BattleTech, MTG. Sometimes I might pick these up again: Warhammer, Scouting, Megazone, Airsoft.'
+  m_text: '
+
+    Deep sky photography and digital drawing'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3321,8 +3330,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 763.64276, y: 128.46112}
-  m_SizeDelta: {x: 746.2355, y: 129.9511}
+  m_AnchoredPosition: {x: 535.3, y: 119.52}
+  m_SizeDelta: {x: 289.55, y: 87.3088}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1283110775
 MonoBehaviour:
@@ -3561,8 +3570,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 637.2578, y: -235.57004}
-  m_SizeDelta: {x: 287.2913, y: 67.1401}
+  m_AnchoredPosition: {x: 535.30005, y: 202.30002}
+  m_SizeDelta: {x: 248.7757, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414030357
 MonoBehaviour:
@@ -3842,11 +3851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To stop the passage of time so that time never runs out again.
-
-    
-
-'
+  m_text: Time manipulation or mindreading
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4104,7 +4109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dark winter
+  m_text: An observatory or a quiet (open) spot free from light pollution where I can play with a telescope... and a futuristic city
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4362,7 +4367,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I have, but I wouldn''t want new pets until I have children of my own.
+  m_text: '
+
+    Jackrussel terrier and Scottish fold
+
+
+
 
 
 
