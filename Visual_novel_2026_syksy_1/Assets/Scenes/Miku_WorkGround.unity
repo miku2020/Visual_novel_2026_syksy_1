@@ -1311,7 +1311,19 @@ MonoBehaviour:
     - sentence: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor sollicitudin eros ut facilisis.   '
       beforeEvent:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 2074970630}
+            m_TargetAssemblyTypeName: FadeInOut, Assembly-CSharp
+            m_MethodName: FadeOut
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       nextEvent:
         m_PersistentCalls:
           m_Calls: []
