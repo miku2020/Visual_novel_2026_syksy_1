@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f10f4508b03934148aeda09fbdb39094
+guid: d30bb8c483e31cf4f9201db04bc93658
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6405161401696765948
-    second: Menu_Buttons02_Inner_0
+      213: 6931477815670118927
+    second: Menu_Buttons02_Inner 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -74,8 +74,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
-    resizeAlgorithm: 1
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -115,23 +115,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Menu_Buttons02_Inner_0
+      name: Menu_Buttons02_Inner 1_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 18
-        width: 220
-        height: 220
+        x: 0
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 70, y: 70, z: 70, w: 70}
+      border: {x: 100, y: 100, z: 100, w: 100}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40832d224ab4c17a0800000000000000
-      internalID: -6405161401696765948
+      spriteID: f0a948b495e813060800000000000000
+      internalID: 6931477815670118927
       vertices: []
       indices: 
       edges: []
@@ -140,7 +140,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 951061ffdc4d0cf43beef6c487eab496
+    spriteID: 3e4d94d45e6c85544b8acec8b16044af
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Menu_Buttons02_Inner_0: -6405161401696765948
+      Menu_Buttons02_Inner 1_0: 6931477815670118927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

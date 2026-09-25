@@ -1941,7 +1941,7 @@ MonoBehaviour:
       isCompleted: 0
       roomIndex: 6
       requiredMcGuffin: 
-    - taskName: kirja
+    - taskName: 
       isCompleted: 0
       roomIndex: 7
       requiredMcGuffin: Big Mick
