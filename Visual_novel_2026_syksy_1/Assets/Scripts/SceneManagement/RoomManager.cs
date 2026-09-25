@@ -40,6 +40,8 @@ public class RoomManager : MonoBehaviour
 
     public void AddMcGuffin(string mcGuffinName)
     {
+        Debug.Log($"RoomManager.AddMcGuffin called with '{mcGuffinName}'.");
+
         if (TaskHolder.Instance == null)
         {
             Debug.LogError("TaskHolder is not available.");
@@ -62,6 +64,8 @@ public class RoomManager : MonoBehaviour
 
     public void CompleteActiveTask(string mcGuffinName)
     {
+        Debug.Log($"RoomManager.CompleteActiveTask called with '{mcGuffinName}'.");
+
         if (TaskHolder.Instance == null)
         {
             Debug.LogError("TaskHolder is not available.");
@@ -73,6 +77,8 @@ public class RoomManager : MonoBehaviour
 
     public void OpenActiveTaskMiscRoom()
     {
+        Debug.Log("RoomManager.OpenActiveTaskMiscRoom called.");
+
         if (TaskHolder.Instance == null)
         {
             Debug.LogError("TaskHolder is not available.");

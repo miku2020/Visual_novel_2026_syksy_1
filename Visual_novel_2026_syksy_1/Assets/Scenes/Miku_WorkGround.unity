@@ -1941,7 +1941,7 @@ MonoBehaviour:
       isCompleted: 0
       roomIndex: 6
       requiredMcGuffin: 
-    - taskName: kirja
+    - taskName: 
       isCompleted: 0
       roomIndex: 7
       requiredMcGuffin: Big Mick
@@ -2054,7 +2054,7 @@ MonoBehaviour:
       roomIndex: 29
       requiredMcGuffin: PCzza
     activeTaskAccepted: 0
-    miscRoomIndex: 10
+    miscRoomIndex: 25
   activeCharacterIndex: 0
   collectedMcGuffins: []
 --- !u!4 &1297044621
