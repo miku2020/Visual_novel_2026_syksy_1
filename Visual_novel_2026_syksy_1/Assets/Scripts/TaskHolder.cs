@@ -22,6 +22,13 @@ public class CharacterTaskSaveData
 /*
 === TASKHOLDER README ===
 
+Hätänen lisäys
+RoomManager.CompleteActiveTask("Big Mick") ennen kuin uusi tehtävä kutsutaan. ja viimeiseen kenttään ei tartte lisätä uutta misc huonetta.
+
+
+
+
+
 TaskHolder on Bootstrap-scenessa oleva pysyva pelitilan manageri. Se sailyttaa
 aktiivisen hahmon, tehtavien etenemisen ja pelaajan keratyt mcguffinit.
 
@@ -269,16 +276,33 @@ public class TaskHolder : MonoBehaviour
 
     public void OpenActiveTaskMiscRoom()
     {
+        Debug.Log($"OpenActiveTaskMiscRoom called. activeCharacterIndex={activeCharacterIndex}, activeTaskCharacterIndex={activeTaskCharacterIndex}.");
+
         if (!TryGetActiveCharacter(out CharacterRoute character))
         {
             Debug.LogError("No active character is configured.");
             return;
         }
 
+        if (TryGetAcceptedTaskOwner(out CharacterRoute acceptedOwner))
+        {
+            if (!string.Equals(acceptedOwner.CharacterName, character.CharacterName, StringComparison.OrdinalIgnoreCase))
+            {
+                Debug.LogWarning($"Task already accepted for '{acceptedOwner.CharacterName}'. Active task owner takes precedence.");
+                return;
+            }
+        }
+
         int taskIndex = GetNextTaskIndex(character);
         if (taskIndex < 0)
         {
             Debug.Log($"All tasks for '{character.CharacterName}' are completed.");
+            return;
+        }
+
+        if (character.ActiveTaskAccepted && activeTaskCharacterIndex == activeCharacterIndex)
+        {
+            Debug.LogWarning($"Task for '{character.CharacterName}' is already active. Complete it with CompleteActiveTask before starting another task.");
             return;
         }
 
@@ -289,8 +313,14 @@ public class TaskHolder : MonoBehaviour
         if (taskIndex < 0)
             return;
 
+        if (activeTaskCharacterIndex < 0 || activeTaskCharacterIndex != activeCharacterIndex || collectedMcGuffins.Length > 0)
+        {
+            ClearCollectedMcGuffins();
+        }
+
         character.SetActiveTaskAccepted(true);
         activeTaskCharacterIndex = activeCharacterIndex;
+        Debug.Log($"Task accepted for '{character.CharacterName}' at index {taskIndex}. Inventory cleared.");
     }
 
     public void AddMcGuffin(string mcGuffinName)
@@ -299,14 +329,15 @@ public class TaskHolder : MonoBehaviour
             return;
 
         string trimmedName = mcGuffinName.Trim();
-        if (!HasMcGuffin(trimmedName))
-        {
-            List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
-            items.Add(trimmedName);
-            collectedMcGuffins = items.ToArray();
-        }
+        Debug.Log($"AddMcGuffin: '{trimmedName}'. Current inventory: {string.Join(", ", collectedMcGuffins ?? Array.Empty<string>())}");
 
-        TryCompleteActiveTask(trimmedName);
+        if (HasMcGuffin(trimmedName))
+            return;
+
+        List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
+        items.Add(trimmedName);
+        collectedMcGuffins = items.ToArray();
+        Debug.Log($"Inventory updated: {string.Join(", ", collectedMcGuffins)}");
     }
 
     public bool HasMcGuffin(string mcGuffinName)
@@ -338,7 +369,9 @@ public class TaskHolder : MonoBehaviour
 
     public bool TryCompleteActiveTask(string mcGuffinName)
     {
-        if (!TryGetActiveCharacter(out CharacterRoute character))
+        Debug.Log($"TryCompleteActiveTask called with '{mcGuffinName}'. activeTaskCharacterIndex={activeTaskCharacterIndex}, activeCharacterIndex={activeCharacterIndex}.");
+
+        if (!TryGetTaskOwner(out CharacterRoute character))
             return false;
 
         int taskIndex = GetNextTaskIndex(character);
@@ -355,6 +388,8 @@ public class TaskHolder : MonoBehaviour
             return false;
         }
 
+        Debug.Log($"Checking completion for '{character.CharacterName}': required='{requiredMcGuffin}', given='{mcGuffinName}', hasItem={HasMcGuffin(requiredMcGuffin)}.");
+
         if (!string.Equals(requiredMcGuffin, mcGuffinName, StringComparison.OrdinalIgnoreCase) ||
             !HasMcGuffin(requiredMcGuffin))
         {
@@ -362,10 +397,11 @@ public class TaskHolder : MonoBehaviour
             return false;
         }
 
-        SetTaskCompleted(taskIndex, true);
+        character.Tasks[taskIndex].SetCompleted(true);
         character.SetActiveTaskAccepted(false);
         activeTaskCharacterIndex = -1;
-        RemoveMcGuffin(requiredMcGuffin);
+        ClearCollectedMcGuffins();
+        Debug.Log($"Task completed for '{character.CharacterName}'. Inventory cleared for next task.");
         return true;
     }
 
@@ -531,6 +567,11 @@ public class TaskHolder : MonoBehaviour
         BootstrapSceneManager.Instance.LoadRoom(character.MiscRoomIndex);
     }
 
+    public void ClearCollectedMcGuffins()
+    {
+        collectedMcGuffins = Array.Empty<string>();
+    }
+
     private void RemoveMcGuffin(string mcGuffinName)
     {
         List<string> items = new List<string>(collectedMcGuffins ?? Array.Empty<string>());
@@ -546,6 +587,45 @@ public class TaskHolder : MonoBehaviour
 
         character = characters[activeCharacterIndex];
         return character != null;
+    }
+
+    private bool TryGetTaskOwner(out CharacterRoute character)
+    {
+        character = null;
+        if (characters == null)
+            return false;
+
+        if (activeTaskCharacterIndex >= 0 && activeTaskCharacterIndex < characters.Length)
+        {
+            character = characters[activeTaskCharacterIndex];
+            if (character != null && character.ActiveTaskAccepted && GetNextTaskIndex(character) >= 0)
+                return true;
+        }
+
+        if (TryGetAcceptedTaskOwner(out character))
+            return true;
+
+        return TryGetActiveCharacter(out character);
+    }
+
+    private bool TryGetAcceptedTaskOwner(out CharacterRoute character)
+    {
+        character = null;
+        if (characters == null)
+            return false;
+
+        for (int index = 0; index < characters.Length; index++)
+        {
+            CharacterRoute configuredCharacter = characters[index];
+            if (configuredCharacter != null && configuredCharacter.ActiveTaskAccepted && GetNextTaskIndex(configuredCharacter) >= 0)
+            {
+                character = configuredCharacter;
+                activeTaskCharacterIndex = index;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private bool TryGetCharacter(string characterName, out CharacterRoute character)
@@ -589,12 +669,12 @@ public class TaskHolder : MonoBehaviour
     private bool TryGetTask(int taskIndex, out TaskRoute task)
     {
         task = null;
-        if (!TryGetActiveCharacter(out CharacterRoute character) ||
+        if (!TryGetTaskOwner(out CharacterRoute character) ||
             character.Tasks == null ||
             taskIndex < 0 ||
             taskIndex >= character.Tasks.Length)
         {
-            Debug.LogError($"Task index {taskIndex} is outside the active character's task list.");
+            Debug.LogError($"Task index {taskIndex} is outside the active task owner's task list.");
             return false;
         }
 

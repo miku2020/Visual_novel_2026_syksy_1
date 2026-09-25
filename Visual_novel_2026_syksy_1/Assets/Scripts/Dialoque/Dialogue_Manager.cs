@@ -139,6 +139,7 @@ public class Dialogue_Manager : MonoBehaviour
                 else if (sentenceComplete)
                 {
                     int sessionBeforeEvent = dialogueSession;
+                    Debug.Log($"Invoking dialogue event: {currentNextEvent}");
                     currentNextEvent?.Invoke();
                     currentNextEvent = null;
                     if (sessionBeforeEvent == dialogueSession)
