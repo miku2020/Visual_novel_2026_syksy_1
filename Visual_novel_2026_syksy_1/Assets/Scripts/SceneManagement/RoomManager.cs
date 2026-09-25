@@ -62,6 +62,19 @@ public class RoomManager : MonoBehaviour
         }
     }
 
+
+    public void CloseRoomCaller()
+    { 
+        if (BootstrapSceneManager.Instance == null)
+        {
+            Debug.LogError("BootstrapSceneManager is not available.");
+            return;
+        }
+         BootstrapSceneManager.Instance.CloseCurrentRoom();
+
+     }
+
+
     public void AddMcGuffin(string mcGuffinName)
     {
         Debug.Log($"RoomManager.AddMcGuffin called with '{mcGuffinName}'.");
