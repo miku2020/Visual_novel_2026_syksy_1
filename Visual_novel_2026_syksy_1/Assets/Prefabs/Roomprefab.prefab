@@ -231,6 +231,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c320fd952023af545b2b31ca48d9916e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Helloworld
+--- !u!1 &2234612570255804575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87817725948758714}
+  - component: {fileID: 2351080613107396455}
+  m_Layer: 0
+  m_Name: CharacterOutfitController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &87817725948758714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234612570255804575}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.35321, y: 1.1843567, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2022690224046506451}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2351080613107396455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2234612570255804575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1dbeff5e93e729458729dd687f1765e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterOutfitController
+  characterSpriteRenderer: {fileID: 0}
+  outfits: []
 --- !u!1 &2663827990574930288
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +581,7 @@ Transform:
   - {fileID: 7289360702622919583}
   - {fileID: 8052879537711349109}
   - {fileID: 462744175768578401}
+  - {fileID: 87817725948758714}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4794307806435850670
