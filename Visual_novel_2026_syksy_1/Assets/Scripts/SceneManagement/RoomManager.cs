@@ -5,30 +5,6 @@ public class RoomManager : MonoBehaviour
 {
     [SerializeField] private Text_Switch textSwitch;
 
-    public static FadeInOut FadeController => FadeInOut.Instance;
-
-    public static void FadeIn()
-    {
-        if (FadeController == null)
-        {
-            Debug.LogError("FadeInOut is not available from RoomManager.");
-            return;
-        }
-
-        FadeController.FadeIn();
-    }
-
-    public static void FadeOut()
-    {
-        if (FadeController == null)
-        {
-            Debug.LogError("FadeInOut is not available from RoomManager.");
-            return;
-        }
-
-        FadeController.FadeOut();
-    }
-
     private void Start()
     {
         if (textSwitch != null)

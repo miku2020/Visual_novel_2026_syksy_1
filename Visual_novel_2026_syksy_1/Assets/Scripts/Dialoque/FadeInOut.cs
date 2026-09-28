@@ -3,23 +3,12 @@ using System.Collections;
 
 public class FadeInOut : MonoBehaviour
 {
-    public static FadeInOut Instance { get; private set; }
-
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField, Min(0f)] private float fadeDuration = 0.5f;
     private Coroutine fadeCoroutine;
 
     private void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-
         if (canvasGroup == null)
         {
             canvasGroup = GetComponent<CanvasGroup>();
