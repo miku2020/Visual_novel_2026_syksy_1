@@ -276,7 +276,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterOutfitController
   characterSpriteRenderer: {fileID: 0}
-  outfits: []
+  outfits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2663827990574930288
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Torii
+  m_text: 'Shop
 
 '
   m_isRightToLeft: 0
