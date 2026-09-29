@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: dialogue.lines.Array.data[9].beforeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Sprite, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4354163174418049902, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5793312387036989260, guid: 102c91bea7beb6f499cc324fe4f7558e, type: 3}
       propertyPath: m_Name
       value: Roomprefab Variant
