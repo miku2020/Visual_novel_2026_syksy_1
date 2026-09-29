@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 453a18a224741154996ed875a4826050
+    m_Address: Assets/Scenes/DetailWindows/NapalmDetails.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4823bdfb8a9b4804184e06b87ff23c36
     m_Address: Assets/Scenes/Rooms/Mirai 1.unity
     m_ReadOnly: 0
@@ -70,6 +75,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60a3572b3c77a22479219fc252b48c95
+    m_Address: Assets/Scenes/DetailWindows/SamDetails.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66401162cdc00fe4b9271c88dc6b61c4
     m_Address: Assets/Placeholder assets/BG4.jpg
     m_ReadOnly: 0
@@ -77,6 +87,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6c73da42f47f212438717d5d9db9edc0
     m_Address: Assets/Scenes/ToriWindows/ElloTori.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e257bcddf3b1414f9fdda0a1f252dbd
+    m_Address: Assets/Scenes/DetailWindows/ElioDetails.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -140,6 +155,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8350d582415aef4f95998edf61c52d6
+    m_Address: Assets/Scenes/DetailWindows/WoydDetails.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: afb04ac7baa5c424ab0f44cc7d161253
     m_Address: Assets/Scenes/Rooms/Woyd 0.unity
     m_ReadOnly: 0
@@ -185,6 +205,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7feb06000ddfb24b93d020a9db47ecb
+    m_Address: Assets/Scenes/DetailWindows/DashDetails.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cecb6392f31be9c489e49236d15663bc
     m_Address: Assets/Scenes/Rooms/Mirai 2.unity
     m_ReadOnly: 0
@@ -222,6 +247,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e5e8814c694e69847b5a6b7676df4784
     m_Address: Assets/Scenes/Rooms/Sam 0.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e80b705ff6c0590498f0ecf7bb551345
+    m_Address: Assets/Scenes/DetailWindows/FrankyDetails.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
