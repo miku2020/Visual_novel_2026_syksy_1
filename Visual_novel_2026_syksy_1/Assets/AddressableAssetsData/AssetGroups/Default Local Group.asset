@@ -50,8 +50,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 328c027def435174f8233454d0d62df5
+    m_Address: Assets/Scenes/ToriWindows/DashTori.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3879820fdec7ec3488338288345875c1
     m_Address: Assets/Scenes/Rooms/Dash 4.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38ece0fc039516643b14ccc7e6d03bf7
+    m_Address: Assets/Scenes/ToriWindows/SamTori.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -105,6 +115,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 762e570a1bece024b952a10c30f01fb0
+    m_Address: Assets/Scenes/ToriWindows/FrankyTori.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7c87b2ebe03efe24fbf7680c7173fde8
     m_Address: Assets/Scenes/Rooms/Woyd 3.unity
     m_ReadOnly: 0
@@ -145,8 +160,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94a8599e7846bcc4f8119021c44b6e53
+    m_Address: Assets/Scenes/ToriWindows/WoydTori.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 977a3274973dbc846b46ad34feee21f4
     m_Address: Assets/Scenes/Rooms/Elio 3.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e3674c978d331d4b9e31cb4863a8481
+    m_Address: Assets/Scenes/ToriWindows/MiraiTori.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -277,6 +302,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fc2133c77fb701f4d9eb4ffa1fec7250
     m_Address: Assets/Scenes/Rooms/Franky 2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fca1dc4215545eb478d3734a7fb6a3b1
+    m_Address: Assets/Scenes/ToriWindows/NapalmTori.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
