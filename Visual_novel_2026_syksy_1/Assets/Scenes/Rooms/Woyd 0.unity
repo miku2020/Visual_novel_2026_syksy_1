@@ -167,6 +167,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[0]'
+      value: 
+      objectReference: {fileID: -785243091636457099, guid: 66aa4b58588666d4e955af498cc91e27, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[1]'
+      value: 
+      objectReference: {fileID: -3172824268700833647, guid: c73af413a8af6814397ae75ae96ed680, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1733270713148300227, guid: 7639101c38fb5b345acf20592207b96f, type: 3}
     - target: {fileID: 4354939644210601516, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: m_Name
       value: Roomprefab
