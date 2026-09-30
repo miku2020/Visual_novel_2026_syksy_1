@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roomprefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4826966793828585757, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793661249678209550, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.name
       value: Player

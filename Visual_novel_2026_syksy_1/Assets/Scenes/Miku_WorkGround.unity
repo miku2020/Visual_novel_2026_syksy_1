@@ -602,37 +602,37 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   toriScenes:
+  - m_AssetGUID: 328c027def435174f8233454d0d62df5
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   - m_AssetGUID: 6c73da42f47f212438717d5d9db9edc0
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 
+  - m_AssetGUID: 762e570a1bece024b952a10c30f01fb0
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 
+  - m_AssetGUID: 9e3674c978d331d4b9e31cb4863a8481
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 
+  - m_AssetGUID: fca1dc4215545eb478d3734a7fb6a3b1
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 
+  - m_AssetGUID: 38ece0fc039516643b14ccc7e6d03bf7
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 
+  - m_AssetGUID: 94a8599e7846bcc4f8119021c44b6e53
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
