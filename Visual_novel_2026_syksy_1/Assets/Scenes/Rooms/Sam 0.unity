@@ -167,9 +167,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[0]'
+      value: 
+      objectReference: {fileID: -5307387890818945405, guid: 39726237ef7bdde4bb9d633e55f28198, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1544907168661399332, guid: a397bd50c6433d54681daca24b856cdf, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[2]'
+      value: 
+      objectReference: {fileID: -3843000959283866712, guid: 4676a7f5326ff904793b92c0ab0eb552, type: 3}
     - target: {fileID: 4354939644210601516, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: m_Name
       value: Roomprefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826966793828585757, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793661249678209550, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.name

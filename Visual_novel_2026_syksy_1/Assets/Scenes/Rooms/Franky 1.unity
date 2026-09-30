@@ -175,9 +175,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[0]'
+      value: 
+      objectReference: {fileID: 4686125084570003869, guid: 39c4e384b991353498570236999d5eea, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6963075926076883370, guid: 1a4d7fd0985afbe41abc4407acd6bd66, type: 3}
+    - target: {fileID: 2351080613107396455, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: 'outfits.Array.data[2]'
+      value: 
+      objectReference: {fileID: 4294489684192882256, guid: 36f0a0bc0d1e2e64ea4be44d0b07d3df, type: 3}
     - target: {fileID: 4354939644210601516, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: m_Name
       value: Roomprefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826966793828585757, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5131075049570653253, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: m_AnchorMax.x
@@ -202,6 +218,10 @@ PrefabInstance:
     - target: {fileID: 5131075049570653253, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 344.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793661249678209550, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7968387475252959001, guid: 3fd148b7692c7134dba83b213cd75b37, type: 3}
       propertyPath: dialogue.name
