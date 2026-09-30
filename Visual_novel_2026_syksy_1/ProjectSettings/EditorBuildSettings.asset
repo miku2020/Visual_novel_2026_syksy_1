@@ -6,8 +6,137 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Rooms/Dash 0.unity
+    guid: df860806f7190844b85687f8a613708d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Dash 1.unity
+    guid: e195d7fdeb9b8084984c29f853d302d4
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Dash 2.unity
+    guid: c0d13e931fdb3b148b367a2884582fcb
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Dash 3.unity
+    guid: 5abba1cfb36d2004598632cde40978d8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Dash 4.unity
+    guid: 3879820fdec7ec3488338288345875c1
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Elio 0.unity
+    guid: 2bbcb53515bc43949bc118ba4f337447
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Elio 1..unity
+    guid: b05f3b9802ddf504ab2988c6bf1d9d1b
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Elio 2.unity
+    guid: 8288725b32572fc45a3af90944a8391d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Elio 3.unity
+    guid: 977a3274973dbc846b46ad34feee21f4
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Elio 4.unity
+    guid: b719f970a877dab48afee08fb032d059
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/DashDetails.unity
+    guid: c7feb06000ddfb24b93d020a9db47ecb
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/ElioDetails.unity
+    guid: 6e257bcddf3b1414f9fdda0a1f252dbd
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/FrankyDetails.unity
+    guid: e80b705ff6c0590498f0ecf7bb551345
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/MiraiDetails.unity
+    guid: eb7a7fd2d75916942a34f5f43c820b76
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/NapalmDetails.unity
+    guid: 453a18a224741154996ed875a4826050
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/SamDetails.unity
+    guid: 60a3572b3c77a22479219fc252b48c95
+  - enabled: 1
+    path: Assets/Scenes/DetailWindows/WoydDetails.unity
+    guid: a8350d582415aef4f95998edf61c52d6
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Franky 0.unity
+    guid: 545f9731f24d1e740905ea7431ce2b8e
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Franky 1.unity
+    guid: 71175144bfc63d64c9283d21c8f3a3d4
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Franky 2.unity
+    guid: fc2133c77fb701f4d9eb4ffa1fec7250
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Franky 3.unity
+    guid: cf96fdd2c94b51c4d89b20a1c0e07259
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Franky 4.unity
+    guid: 0a37c2b2f2b3c434a8dc114ba83bfc40
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Mirai 0.unity
+    guid: fe4ece2fd04aa5a459e46d95f4c1eb90
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Mirai 1.unity
+    guid: 4823bdfb8a9b4804184e06b87ff23c36
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Mirai 2.unity
+    guid: cecb6392f31be9c489e49236d15663bc
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Mirai 3.unity
+    guid: 001aa51a8431fd84399de9d9b0433589
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Mirai 4.unity
+    guid: c03ad7ae8f7f061439b3bdd726aee85b
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Napalm 0.unity
+    guid: 1ec5a51898c9bc84b925b1a77703deac
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Napalm 1..unity
+    guid: 12dd3d25879a0084fb88297440c4ebf3
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Napalm 2.unity
+    guid: d4e72de198c55e041a1514f0f25e9666
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Napalm 3.unity
+    guid: 8241158f5b185424081ffb098b1c617a
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Napalm 4.unity
+    guid: 1accd9a3a06e8414a86507173b52fa2d
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Sam 0.unity
+    guid: e5e8814c694e69847b5a6b7676df4784
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Sam 1.unity
+    guid: 0f3da55f47ac1614a8d6cde12c23b3f8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Sam 2.unity
+    guid: e103b5d40f3b2c642a7145d8c0bf99a2
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Sam 3.unity
+    guid: bc35ed66a2efcba429caa958046f7be8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Sam 4.unity
+    guid: a042b4158b5f7034caf4f91f7fe671e1
+  - enabled: 1
+    path: Assets/Scenes/Miku_WorkGround.unity
+    guid: 27f7cccef9d53e44c887fae62b5fea32
+  - enabled: 1
+    path: Assets/Scenes/ToriWindows/ElloTori.unity
+    guid: 6c73da42f47f212438717d5d9db9edc0
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Woyd 0.unity
+    guid: afb04ac7baa5c424ab0f44cc7d161253
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Woyd 1.unity
+    guid: 8d208a670e8f74a468c286a1d1364a57
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Woyd 2.unity
+    guid: ed0c9e09777ad6a459fffd5f28e767b5
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Woyd 3.unity
+    guid: 7c87b2ebe03efe24fbf7680c7173fde8
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Woyd 4.unity
+    guid: e1edff62cae4c7c4dad33756149254b2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e27558faaec64b347b1c0af76b9420cd, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
