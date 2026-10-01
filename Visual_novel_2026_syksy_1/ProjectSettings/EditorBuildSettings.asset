@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Miku_WorkGround.unity
+    guid: 27f7cccef9d53e44c887fae62b5fea32
+  - enabled: 1
     path: Assets/Scenes/Rooms/Dash 0.unity
     guid: df860806f7190844b85687f8a613708d
   - enabled: 1
@@ -116,9 +119,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rooms/Sam 4.unity
     guid: a042b4158b5f7034caf4f91f7fe671e1
-  - enabled: 1
-    path: Assets/Scenes/Miku_WorkGround.unity
-    guid: 27f7cccef9d53e44c887fae62b5fea32
   - enabled: 1
     path: Assets/Scenes/ToriWindows/ElloTori.unity
     guid: 6c73da42f47f212438717d5d9db9edc0
