@@ -299,11 +299,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402409371109889868}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8720482858180827547}
   - {fileID: 7332588513210399584}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1282,7 +1283,7 @@ GameObject:
   - component: {fileID: 5685446331443207449}
   - component: {fileID: 2155120627196954733}
   - component: {fileID: 3509903318202252770}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scrollbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,12 +1303,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4109060007091973473}
-  m_Father: {fileID: 7332588513210399584}
+  m_Father: {fileID: 1705971977350904363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 290, y: 0}
-  m_SizeDelta: {x: 20, y: 650}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 10, y: 0}
+  m_SizeDelta: {x: 20, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5685446331443207449
 CanvasRenderer:
@@ -1360,7 +1361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Scrollbar
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 2
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1967,7 +1968,7 @@ GameObject:
   - component: {fileID: 1793065972578940504}
   - component: {fileID: 3986231750818846015}
   - component: {fileID: 4690637556814125772}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2425,7 +2426,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8720482858180827547}
   - {fileID: 8579811403196279895}
   m_Father: {fileID: 1705971977350904363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2492,7 +2492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4109060007091973473}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
