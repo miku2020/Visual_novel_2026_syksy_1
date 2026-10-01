@@ -1673,7 +1673,7 @@ GameObject:
   - component: {fileID: 1115582986636418649}
   - component: {fileID: 5651917933868484385}
   m_Layer: 5
-  m_Name: Dead Mouse
+  m_Name: Dead mouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2645,7 +2645,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 590.22, y: -130.79}
+  m_AnchoredPosition: {x: 590.22, y: -129.1}
   m_SizeDelta: {x: 72.501, y: 68.7288}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3283213585057604419
@@ -6341,7 +6341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 436.97, y: 287.56}
+  m_AnchoredPosition: {x: 452.88, y: 287.56}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3258663393915799976
@@ -6374,8 +6374,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Shop
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ca7a28ed68c6bd4493f31569036df97, type: 2}
+  m_sharedMaterial: {fileID: 4308160571243419301, guid: 5ca7a28ed68c6bd4493f31569036df97, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6399,8 +6399,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6988,8 +6988,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 405, y: -240.71}
-  m_SizeDelta: {x: 83.7011, y: 87.7273}
+  m_AnchoredPosition: {x: 403, y: -240.36}
+  m_SizeDelta: {x: 80.2458, y: 83.936}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5542506976928782209
 CanvasRenderer:
@@ -7661,8 +7661,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 403, y: -129.84}
-  m_SizeDelta: {x: 91.4732, y: 85.3665}
+  m_AnchoredPosition: {x: 401.5, y: -126.39}
+  m_SizeDelta: {x: 87.8482, y: 81.7415}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8838802423034823366
 CanvasRenderer:
