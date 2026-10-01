@@ -298,9 +298,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1299396785}
     m_Modifications:
+    - target: {fileID: 1173485138751950012, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 2368195450923111849, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258594156228332437, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 4606203782542279219, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_Name
       value: DetailsGroup
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522848092033771871, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 549.1301
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522848092033771871, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 53.7921
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522848092033771871, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.025483
+      objectReference: {fileID: 0}
+    - target: {fileID: 5522848092033771871, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000010729
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981070415939455988, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_text
+      value: 'DETAILS: ELIO'
       objectReference: {fileID: 0}
     - target: {fileID: 8861079024617587415, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_Pivot.x
@@ -680,9 +712,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4778277998160442073, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_text
+      value: Jackrussell terrier and Scottish straight
+      objectReference: {fileID: 0}
     - target: {fileID: 5384353545870444365, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_Name
       value: DetailsWindowController 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331658411681061679, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_text
+      value: I think too much
+      objectReference: {fileID: 0}
+    - target: {fileID: 9202904876904484728, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
