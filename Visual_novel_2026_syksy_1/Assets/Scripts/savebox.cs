@@ -7,7 +7,6 @@ using TMPro;
 public class savebox : MonoBehaviour
 {
     private string savename;
-    private string playername;
     private int savescore;
     private System.DateTime savedate;
     private string dir;
@@ -20,11 +19,10 @@ public class savebox : MonoBehaviour
 
     private Gamedata gamedata;
 
-    public void Initialize(Gamedata data, string saveName, string playerName, int score, System.DateTime date, string directory)
+    public void Initialize(Gamedata data, string saveName, int score, System.DateTime date, string directory)
     {
         gamedata = data;
         savename = saveName;
-        playername = playerName;
         savescore = score;
         savedate = date;
         dir = directory;
@@ -42,12 +40,12 @@ public class savebox : MonoBehaviour
 
     public void loadsave()
     {
-        if (gamedata == null || string.IsNullOrWhiteSpace(dir) || string.IsNullOrWhiteSpace(savename))
+        if (gamedata == null || string.IsNullOrWhiteSpace(dir))
         {
             Debug.LogError("Save box is not initialized correctly.");
             return;
         }
 
-        gamedata.LoadSaveFile(System.IO.Path.Combine(dir, savename + ".json"));
+        gamedata.LoadSaveFile(dir);
     }
 }
