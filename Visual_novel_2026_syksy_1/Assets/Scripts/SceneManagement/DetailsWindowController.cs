@@ -120,6 +120,13 @@ public class DetailsWindowController : MonoBehaviour
         }
 
         detailsWindow.anchoredPosition = targetPosition;
+
+        if (opening && cardsScrollRect != null)
+        {
+            Canvas.ForceUpdateCanvases();
+            cardsScrollRect.verticalNormalizedPosition = 1f;
+        }
+
         isAnimating = false;
         isOpen = opening;
 
