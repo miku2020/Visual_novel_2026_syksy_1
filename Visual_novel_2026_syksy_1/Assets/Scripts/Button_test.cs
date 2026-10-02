@@ -38,14 +38,14 @@ public class Button_test : MonoBehaviour
 
     public void refreshButton()
     {
-        if (gamedata == null || PlayerField == null)
+        if (gamedata == null)
         {
             Debug.LogError("Refresh button is missing its references.");
             return;
         }
 
-        cleanPlayerDirs();
-        gamedata.getDirectiories();
+        CleanSaveFiles();
+        gamedata.getsaves(Application.persistentDataPath);
     }
 
     private void Update()
@@ -106,7 +106,7 @@ public class Button_test : MonoBehaviour
 
         foreach (Transform child in saveField.transform) { GameObject.Destroy(child.gameObject); }
     }
-    public void InstantiateSaveDirs(string saveName, string playerName, int score, System.DateTime date, string directory)
+    public void InstantiateSaveDirs(string saveName, int score, System.DateTime date, string directory)
     {        
         if (SaveBoxPrefab == null || saveField == null)
         {
@@ -123,7 +123,7 @@ public class Button_test : MonoBehaviour
             return;
         }
 
-        saveBox.Initialize(gamedata, saveName, playerName, score, date, directory);
+        saveBox.Initialize(gamedata, saveName, score, date, directory);
     }
 
 
