@@ -91,12 +91,6 @@ public class Gamedata : MonoBehaviour
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(playerdata.playerName))
-        {
-            Debug.LogWarning("Cannot save because the player name is empty.");
-            return;
-        }
-
         if (string.IsNullOrWhiteSpace(save_input))
         {
             Debug.LogWarning("Cannot save because the save name is empty.");
@@ -109,7 +103,7 @@ public class Gamedata : MonoBehaviour
             fileName += ".json";
         }
 
-        JsonDirectory = Path.Combine(Application.persistentDataPath, playerdata.playerName);
+        JsonDirectory = Application.persistentDataPath;
         JSON_FILE_NAME = fileName;
         string filepath = Path.Combine(JsonDirectory, fileName);
         Directory.CreateDirectory(JsonDirectory);
@@ -209,12 +203,12 @@ public class Gamedata : MonoBehaviour
                     continue;
                 }
 
+                string saveName = Path.GetFileNameWithoutExtension(dir);
                 loadeddir = dir;
-                loadedname = loadedData.playerName;
+                loadedname = saveName;
                 loadedscore = loadedData.Score;
                 loadedtime = filedate;
-                string saveName = Path.GetFileNameWithoutExtension(dir);
-                UIscript.InstantiateSaveDirs(saveName, loadedname, loadedscore, loadedtime, loadeddir);
+                UIscript.InstantiateSaveDirs(saveName, loadedscore, loadedtime, loadeddir);
             }
             catch (Exception exception)
             {
@@ -231,31 +225,27 @@ public class Gamedata : MonoBehaviour
             return;
         }
 
-        string[] dirs = Directory.GetDirectories(Application.persistentDataPath);
+        string[] saveFiles = Directory.GetFiles(Application.persistentDataPath, "*.json");
 
         List<(string Name, int Score, DateTime filedate)> data = new List<(string Name, int Score, DateTime filedate)>();
 
-        foreach (string dir in dirs) 
+        foreach (string file in saveFiles)
         {
-            string[] saveFiles = Directory.GetFiles(dir, "*.json");
-            foreach (string file in saveFiles)
+            try
             {
-                try
+                string json = File.ReadAllText(file);
+                PlayerData loadedData = JsonUtility.FromJson<PlayerData>(json);
+                if (loadedData == null)
                 {
-                    string json = File.ReadAllText(file);
-                    PlayerData loadedData = JsonUtility.FromJson<PlayerData>(json);
-                    if (loadedData == null || string.IsNullOrWhiteSpace(loadedData.playerName))
-                    {
-                        continue;
-                    }
+                    continue;
+                }
 
-                    DateTime filedate = File.GetLastWriteTime(file);
-                    data.Add((loadedData.playerName, loadedData.Score, filedate));
-                }
-                catch (Exception exception)
-                {
-                    Debug.LogWarning("Could not read highscore file " + file + ": " + exception.Message);
-                }
+                DateTime filedate = File.GetLastWriteTime(file);
+                data.Add((Path.GetFileNameWithoutExtension(file), loadedData.Score, filedate));
+            }
+            catch (Exception exception)
+            {
+                Debug.LogWarning("Could not read highscore file " + file + ": " + exception.Message);
             }
         }
         var scoreQuery = from scores in data
@@ -266,14 +256,13 @@ public class Gamedata : MonoBehaviour
 
    
 
-    public void SetPlayerData(string playername, int playerscore)
+    public void SetPlayerData(int playerscore)
     {
         if (playerdata == null)
         {
             playerdata = new PlayerData();
         }
 
-        playerdata.playerName = playername;
         playerdata.Score = playerscore;
         Debug.Log("data set");
     }
