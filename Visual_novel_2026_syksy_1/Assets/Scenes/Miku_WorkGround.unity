@@ -1309,7 +1309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -497, y: -321.85}
+  m_AnchoredPosition: {x: -489, y: -286}
   m_SizeDelta: {x: 448.2756, y: 123.7069}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499249058
@@ -1332,11 +1332,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Programming - Miku
+  m_text: 'Miku - Programming
 
-    Character art - Grimortis & Eeri
+    Eeri - Characte art (Woyd & Elio)
 
-    Character rooms - Iiris'
+    Iris - Character rooms
+
+    Grimortis - Writing & Character art '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5ca7a28ed68c6bd4493f31569036df97, type: 2}
   m_sharedMaterial: {fileID: 4308160571243419301, guid: 5ca7a28ed68c6bd4493f31569036df97, type: 2}
@@ -2517,7 +2519,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -621.14, y: -235}
+  m_AnchoredPosition: {x: -613.14, y: -193}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384527277
