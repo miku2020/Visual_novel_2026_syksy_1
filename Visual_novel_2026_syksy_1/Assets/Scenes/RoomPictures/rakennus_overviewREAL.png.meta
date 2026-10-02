@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3926f30bdd6abe947be91051189143a5
+guid: 82fd65e1e66ab3643943021b3f6fe21f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1729310749691775622
-    second: apartment_hallway_0
+      213: -5928976458811472446
+    second: rakennus_overviewREAL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: apartment_hallway_0
+      name: rakennus_overviewREAL_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 612
-        height: 408
+        width: 3000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +130,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a757b5219014008e0800000000000000
-      internalID: -1729310749691775622
+      spriteID: 2c583e2e25b08bda0800000000000000
+      internalID: -5928976458811472446
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      apartment_hallway_0: -1729310749691775622
+      rakennus_overviewREAL_0: -5928976458811472446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
