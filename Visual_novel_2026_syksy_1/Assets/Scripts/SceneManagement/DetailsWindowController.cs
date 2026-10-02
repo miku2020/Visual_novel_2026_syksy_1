@@ -13,7 +13,7 @@ public class DetailsWindowController : MonoBehaviour
 
     [Header("Details")]
     [SerializeField] private RectTransform detailsWindow;
-    [SerializeField] private GridLayoutGroup cardsGrid;
+    [SerializeField] private ScrollRect cardsScrollRect;
     [SerializeField] private OverlayType overlayType = OverlayType.Details;
 
     [Header("Slide animation")]
@@ -44,7 +44,7 @@ public class DetailsWindowController : MonoBehaviour
         }
 
         openPosition = detailsWindow.anchoredPosition;
-        ConfigureGrid();
+        FitScrollContentToChildren();
     }
 
     private void Start()
@@ -75,31 +75,33 @@ public class DetailsWindowController : MonoBehaviour
 
     public void CloseDetails()
     {
-        if (!enabled || (!isOpen && !isAnimating))
-            return;
+        if (!enabled || (!isOpen && !isAnimating)) return;
 
-        if (slideCoroutine != null)
-            StopCoroutine(slideCoroutine);
+        if (slideCoroutine != null) StopCoroutine(slideCoroutine);
 
         slideCoroutine = StartCoroutine(SlideTo(GetClosedPosition(), false));
     }
 
     public bool HandleEscape()
     {
-        if (!IsOpen)
-            return false;
+        if (!IsOpen) return false;
 
         CloseDetails();
         return true;
     }
 
-    private void ConfigureGrid()
+    // Kortit asetellaan vapaasti Editorissa; Content-alue mitoitetaan niiden todellisen sijainnin mukaan,
+    // jotta ScrollRectin Clamped-vieritys pysyy juuri sisällön rajaamalla alueella.
+    public void FitScrollContentToChildren()
     {
-        if (cardsGrid == null)
-            return;
+        if (cardsScrollRect == null || cardsScrollRect.content == null) return;
 
-        cardsGrid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        cardsGrid.constraintCount = 3;
+        RectTransform content = cardsScrollRect.content;
+
+        if (content.childCount == 0) return;
+
+        Bounds bounds = RectTransformUtility.CalculateRelativeRectTransformBounds(content, content);
+        content.sizeDelta = new Vector2(bounds.size.x, bounds.size.y);
     }
 
     private IEnumerator SlideTo(Vector2 targetPosition, bool opening)
@@ -118,6 +120,13 @@ public class DetailsWindowController : MonoBehaviour
         }
 
         detailsWindow.anchoredPosition = targetPosition;
+
+        if (opening && cardsScrollRect != null)
+        {
+            Canvas.ForceUpdateCanvases();
+            cardsScrollRect.verticalNormalizedPosition = 1f;
+        }
+
         isAnimating = false;
         isOpen = opening;
 
@@ -165,13 +174,21 @@ DETAILS-IKKUNAN KAYTTOONOTTO
 6. Lisaa sama DetailsWindowController myos Tori Sceneen.
 7. Aseta overlayType Inspectorissa: Details Details Sceneille ja Tori Tori Sceneille.
 8. Aseta detailsWindow Details-paneeliin.
-9. Aseta cardsGrid-kenttaan GridLayoutGroup, jossa on kolme saraketta.
-10. Aseta kortit ja niiden tekstit manuaalisesti hahmon omaan Sceneen.
+9. Lisaa Details-paneeliin ScrollRect (Viewport + Content) ja aseta sen
+   Movement Type -asetukseksi Clamped. Aseta cardsScrollRect-kenttaan
+   tama ScrollRect.
+10. Aseta kortit Content-objektin lapsiksi ja asettele ne vapaasti,
+    ilman GridLayoutGroupia. Skripti mitoittaa Content-alueen
+    automaattisesti korttien todellisen sijainnin mukaan (Awakessa),
+    jotta vieritys clamppautuu juuri siihen alueeseen jossa kortteja on.
+11. Jos kortteja lisataan tai niiden nakyvyytta muutetaan ajon aikana,
+    kutsu FitScrollContentToChildren() uudelleen paivittaaksesi
+    vierityksen rajat.
 
 Tämä skripti ei hallitse korttien tekstejä, painikkeita tai näkyvyyttä.
 Tekstit, "Näytä lisää" -painike ja lisäsisällön näkyvyys asetetaan kokonaan
 manuaalisesti Unity Editorissa. Skripti hallitsee vain Details-ikkunan avaamista,
-sulkemista ja korttien kolmen sarakkeen ruudukkoa.
+sulkemista ja korttien vierityksen rajaamista sisällön mukaan.
 
 Details-tilassa Escape tai Backspace sulkee Details Scenen.
 Tori-tilassa Escape tai Backspace sulkee Tori Scenen.
