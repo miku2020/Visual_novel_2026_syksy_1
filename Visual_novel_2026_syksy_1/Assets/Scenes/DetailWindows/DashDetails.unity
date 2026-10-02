@@ -585,6 +585,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3519228078776606648, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519228078776606648, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3739503628811868188, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: Gaming, "hiking" (wandering)
@@ -595,6 +603,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4044324188476333394, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044324188476333394, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079646310389619298, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
@@ -633,6 +645,22 @@ PrefabInstance:
       propertyPath: m_text
       value: Sometimes I think too much
       objectReference: {fileID: 0}
+    - target: {fileID: 6342036883102781691, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 589.4452
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342036883102781691, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 559.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342036883102781691, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -296.21268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6342036883102781691, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -284.34528
+      objectReference: {fileID: 0}
     - target: {fileID: 6519887194095845155, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: None
@@ -661,13 +689,33 @@ PrefabInstance:
       propertyPath: m_text
       value: None
       objectReference: {fileID: 0}
+    - target: {fileID: 7453286160427287689, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: detailsWindow
+      value: 
+      objectReference: {fileID: 1299396785}
     - target: {fileID: 7508352980966758030, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: PIZZA
       objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8271543498744029636, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: Flight or time rewind or shapeshifting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632758252363809923, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9138470319534918988, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -705,15 +753,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1173485138751950012, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2368195450923111849, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4258594156228332437, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4606203782542279219, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_Name

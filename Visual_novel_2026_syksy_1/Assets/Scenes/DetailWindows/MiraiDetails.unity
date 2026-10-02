@@ -497,6 +497,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1320671363553873043, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1707166252180276456, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: The fact that fiction and reality are conflated, or that fictional elements are regulated illogically and without foundation
@@ -701,9 +705,25 @@ PrefabInstance:
       propertyPath: m_text
       value: Actions speak louder than words
       objectReference: {fileID: 0}
+    - target: {fileID: 7453286160427287689, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: detailsWindow
+      value: 
+      objectReference: {fileID: 1299396785}
     - target: {fileID: 7508352980966758030, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: Italian stew
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986178996143614245, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -753,15 +773,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1173485138751950012, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 2368195450923111849, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4258594156228332437, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4606203782542279219, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_Name

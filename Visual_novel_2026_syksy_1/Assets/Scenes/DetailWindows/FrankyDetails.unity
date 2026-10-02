@@ -813,6 +813,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -355.54
       objectReference: {fileID: 0}
+    - target: {fileID: 7453286160427287689, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: detailsWindow
+      value: 
+      objectReference: {fileID: 1299396785}
     - target: {fileID: 7508352980966758030, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_text
       value: Bacon pasta from K market
@@ -828,6 +832,18 @@ PrefabInstance:
     - target: {fileID: 7844506139927476749, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -682.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 390
+      objectReference: {fileID: 0}
+    - target: {fileID: 7902314446960274541, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986178996143614245, guid: 731049c1fe7cb0342aaf05e8833471db, type: 3}
       propertyPath: m_SizeDelta.x
