@@ -151,12 +151,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1663954006}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -51.349976, y: 49.354}
-  m_SizeDelta: {x: 142.3, y: 68.0535}
+  m_AnchoredPosition: {x: -88.11804, y: 96.33299}
+  m_SizeDelta: {x: 263.084, y: 136.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9215987
 MonoBehaviour:
@@ -733,12 +733,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1065512616}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.713623, y: -117.0594}
-  m_SizeDelta: {x: 147.0272, y: 69.7832}
+  m_AnchoredPosition: {x: -93.824, y: -229.29}
+  m_SizeDelta: {x: 251.68, y: 154.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &153964014
 MonoBehaviour:
@@ -784,16 +784,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145870112}
-        m_TargetAssemblyTypeName: BootstrapSceneManager, Assembly-CSharp
-        m_MethodName: LoadRoom
-        m_Mode: 3
+      - m_Target: {fileID: 145870114}
+        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+        m_MethodName: SelectCharacterAndOpenMiscRoom
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 16
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Sam
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &153964015
@@ -1321,12 +1321,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2036372859}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507.26, y: 49.354}
-  m_SizeDelta: {x: 144.44, y: 68.053}
+  m_AnchoredPosition: {x: 887.8395, y: 90.11623}
+  m_SizeDelta: {x: 258.1188, y: 148.4595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &494403250
 MonoBehaviour:
@@ -1454,12 +1454,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1450291593}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 507.26486, y: 193.1973}
-  m_SizeDelta: {x: 144.4327, y: 63.7292}
+  m_AnchoredPosition: {x: 883.4, y: 382.68}
+  m_SizeDelta: {x: 249.2306, y: 135.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802576071
 MonoBehaviour:
@@ -1505,16 +1505,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145870112}
-        m_TargetAssemblyTypeName: BootstrapSceneManager, Assembly-CSharp
-        m_MethodName: LoadRoom
-        m_Mode: 3
+      - m_Target: {fileID: 145870114}
+        m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+        m_MethodName: SelectCharacterAndOpenMiscRoom
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 21
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Woyd
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &802576072
@@ -1584,13 +1584,20 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1767880194}
+  - {fileID: 494403249}
+  - {fileID: 1973649632}
+  - {fileID: 9215986}
+  - {fileID: 1333150795}
+  - {fileID: 153964013}
+  - {fileID: 802576070}
   m_Father: {fileID: 1888185657}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 2560, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849667340
 MonoBehaviour:
@@ -2197,12 +2204,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1376473265}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.96468, y: 196.10638}
-  m_SizeDelta: {x: 141.8382, y: 69.5398}
+  m_AnchoredPosition: {x: 387.85, y: 387.06107}
+  m_SizeDelta: {x: 239.5311, y: 144.0677}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1333150796
 MonoBehaviour:
@@ -3015,12 +3022,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1164143315}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.714, y: 193.8564}
-  m_SizeDelta: {x: 147.03, y: 74.0433}
+  m_AnchoredPosition: {x: -88.118, y: 389}
+  m_SizeDelta: {x: 251.6799, y: 122.6898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767880195
 MonoBehaviour:
@@ -3164,10 +3171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3212,13 +3219,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 849667339}
-  - {fileID: 1767880194}
-  - {fileID: 494403249}
-  - {fileID: 1973649632}
-  - {fileID: 9215986}
-  - {fileID: 1333150795}
-  - {fileID: 153964013}
-  - {fileID: 802576070}
   - {fileID: 388716408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3479,12 +3479,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 134922625}
-  m_Father: {fileID: 1888185657}
+  m_Father: {fileID: 849667339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.96, y: -117.06}
-  m_SizeDelta: {x: 141.84, y: 69.787}
+  m_AnchoredPosition: {x: 391.3989, y: -229.29532}
+  m_SizeDelta: {x: 246.6378, y: 154.6976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973649633
 MonoBehaviour:

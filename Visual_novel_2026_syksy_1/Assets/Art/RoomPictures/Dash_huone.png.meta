@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a697ae358c7e9f1408239ac764eadacd
+guid: c69d3ff41684b67469733d021a848dce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4103753167313774131
-    second: pexels-paul-kre-1633265-6040416_0
+      213: -1123448097846113749
+    second: Dash_huone_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,17 +111,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pexels-paul-kre-1633265-6040416_0
+      name: Dash_huone_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 5900
-        height: 3933
+        width: 3000
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3362f9753c573f830800000000000000
-      internalID: 4103753167313774131
+      spriteID: b2a4b4448e5b860f0800000000000000
+      internalID: -1123448097846113749
       vertices: []
       indices: 
       edges: []
@@ -150,7 +176,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pexels-paul-kre-1633265-6040416_0: 4103753167313774131
+      Dash_huone_0: -1123448097846113749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

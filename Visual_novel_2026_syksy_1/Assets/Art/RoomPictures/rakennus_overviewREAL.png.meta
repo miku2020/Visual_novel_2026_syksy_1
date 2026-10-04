@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c69d3ff41684b67469733d021a848dce
+guid: 82fd65e1e66ab3643943021b3f6fe21f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1123448097846113749
-    second: Dash_huone_0
+      213: -5928976458811472446
+    second: rakennus_overviewREAL_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -111,11 +111,37 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dash_huone_0
+      name: rakennus_overviewREAL_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b2a4b4448e5b860f0800000000000000
-      internalID: -1123448097846113749
+      spriteID: 2c583e2e25b08bda0800000000000000
+      internalID: -5928976458811472446
       vertices: []
       indices: 
       edges: []
@@ -150,7 +176,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Dash_huone_0: -1123448097846113749
+      rakennus_overviewREAL_0: -5928976458811472446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

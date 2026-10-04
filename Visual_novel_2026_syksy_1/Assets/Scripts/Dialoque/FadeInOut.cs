@@ -7,6 +7,8 @@ public class FadeInOut : MonoBehaviour
     [SerializeField, Min(0f)] private float fadeDuration = 0.5f;
     private Coroutine fadeCoroutine;
 
+    public bool IsFading => fadeCoroutine != null;
+
     private void Awake()
     {
         if (canvasGroup == null)
@@ -36,6 +38,13 @@ public class FadeInOut : MonoBehaviour
         if (fadeCoroutine != null)
         {
             StopCoroutine(fadeCoroutine);
+        }
+
+        if (fadeDuration <= 0f)
+        {
+            canvasGroup.alpha = targetAlpha;
+            fadeCoroutine = null;
+            return;
         }
 
         fadeCoroutine = StartCoroutine(FadeCanvasGroup(targetAlpha));

@@ -5,6 +5,9 @@ public class RoomManager : MonoBehaviour
 {
     [SerializeField] private Text_Switch textSwitch;
 
+    private FadeInOut fadeInOut;
+    private bool isClosingRoom;
+
     private void Start()
     {
         if (textSwitch != null)
@@ -34,21 +37,84 @@ public class RoomManager : MonoBehaviour
                 return;
             }
 
-            BootstrapSceneManager.Instance.CloseCurrentRoom();
+            CloseRoomWithFade();
         }
     }
 
 
     public void CloseRoomCaller()
-    { 
-        if (BootstrapSceneManager.Instance == null)
+    {
+        CloseRoomWithFade();
+    }
+
+    public void FadeIn()
+    {
+        FadeInOut fade = GetFadeInOut();
+        if (fade != null)
+        {
+            fade.FadeIn();
+        }
+    }
+
+    public void FadeOut()
+    {
+        FadeInOut fade = GetFadeInOut();
+        if (fade != null)
+        {
+            fade.FadeOut();
+        }
+    }
+
+    private void CloseRoomWithFade()
+    {
+        BootstrapSceneManager sceneManager = BootstrapSceneManager.Instance;
+        if (sceneManager == null)
         {
             Debug.LogError("BootstrapSceneManager is not available.");
             return;
         }
-         BootstrapSceneManager.Instance.CloseCurrentRoom();
 
-     }
+        if (isClosingRoom || sceneManager.IsBusy || sceneManager.CurrentRoomIndex < 0)
+        {
+            return;
+        }
+
+        FadeInOut fade = GetFadeInOut();
+        if (fade == null)
+        {
+            sceneManager.CloseCurrentRoom();
+            return;
+        }
+
+        isClosingRoom = true;
+        fade.FadeIn();
+        StartCoroutine(CloseRoomAfterFade(sceneManager));
+    }
+
+    private FadeInOut GetFadeInOut()
+    {
+        if (fadeInOut == null)
+        {
+            fadeInOut = FindAnyObjectByType<FadeInOut>();
+        }
+
+        if (fadeInOut == null)
+        {
+            Debug.LogError("FadeInOut was not found in the bootstrap scene.", this);
+        }
+
+        return fadeInOut;
+    }
+
+    private System.Collections.IEnumerator CloseRoomAfterFade(BootstrapSceneManager sceneManager)
+    {
+        while (fadeInOut != null && fadeInOut.IsFading)
+        {
+            yield return null;
+        }
+
+        sceneManager.CloseCurrentRoom();
+    }
 
 
     public void AddMcGuffin(string mcGuffinName)

@@ -797,6 +797,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 700
       objectReference: {fileID: 0}
+    - target: {fileID: 4174990339754163805, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4258594156228332437, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_SizeDelta.x
       value: 700
@@ -824,6 +828,10 @@ PrefabInstance:
     - target: {fileID: 5981070415939455988, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_text
       value: 'DETAILS: NAPALM'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6405164074694550720, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8861079024617587415, guid: c5c7623bce0db304bb8fbb85eb55d251, type: 3}
       propertyPath: m_Pivot.x

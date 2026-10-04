@@ -166,14 +166,15 @@ public class BootstrapSceneManager : MonoBehaviour
             isBusy = false;
             LoadRoom(roomIndexToReturnTo);
         }
-        else if (returnScene.IsValid())
-        {
-            SceneManager.SetActiveScene(returnScene);
-            isBusy = false;
-        }
         else
         {
+            if (returnScene.IsValid())
+                SceneManager.SetActiveScene(returnScene);
+
             isBusy = false;
+            FadeInOut fadeInOut = FindAnyObjectByType<FadeInOut>();
+            if (fadeInOut != null)
+                fadeInOut.FadeOut();
         }
     }
 
