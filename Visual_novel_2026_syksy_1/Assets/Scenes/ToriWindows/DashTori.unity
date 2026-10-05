@@ -230,6 +230,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1299396785}
     m_Modifications:
+    - target: {fileID: 2322440263969865138, guid: 67d0d2cdea1736e469d66d174b5bd043, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3878611081850701616, guid: 67d0d2cdea1736e469d66d174b5bd043, type: 3}
       propertyPath: m_Name
       value: toriobj
