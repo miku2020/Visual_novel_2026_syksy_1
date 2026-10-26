@@ -1,0 +1,18 @@
+#pragma kernel Bench
+
+RWStructuredBuffer<float> Data;
+uint Iterations;
+uint Count;
+
+[numthreads(256,1,1)]
+void Bench (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= Count) return;
+
+    float x = id.x * 0.001f;
+    for (uint k = 0; k < Iterations; k++)
+    {
+        x = sin(x) * cos(x) + sqrt(abs(x)) + 0.5f;
+    }
+    Data[id.x] = x;
+}
